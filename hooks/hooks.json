@@ -1,0 +1,16 @@
+{
+  "description": "Optional Bookshelf quote after a completed agent turn.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PLUGIN_ROOT/hooks/ambient.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

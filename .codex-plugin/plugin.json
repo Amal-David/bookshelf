@@ -1,0 +1,43 @@
+{
+  "name": "bookshelf",
+  "version": "1.0.0",
+  "description": "Discover 983 books and bring contextual literary quotes into agent sessions.",
+  "author": {
+    "name": "Amal David",
+    "url": "https://github.com/Amal-David"
+  },
+  "homepage": "https://github.com/Amal-David/bookshelf",
+  "repository": "https://github.com/Amal-David/bookshelf",
+  "license": "MIT",
+  "keywords": [
+    "books",
+    "quotes",
+    "reading",
+    "agent-skills"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Bookshelf",
+    "shortDescription": "Books and contextual quotes for your work",
+    "longDescription": "Browse a curated library of 983 books, request a fitting quote on demand, or opt in to a quiet ambient quote every few completed turns.",
+    "developerName": "Amal David",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/Amal-David/bookshelf",
+    "defaultPrompt": [
+      "Share a fitting book quote for what I am working through.",
+      "Give me a literary companion for this debugging session."
+    ],
+    "brandColor": "#C58B52",
+    "composerIcon": "./assets/bookshelf-icon.svg",
+    "logo": "./assets/bookshelf-icon.svg",
+    "screenshots": [
+      "./assets/screenshots/bookshelf_browse.png",
+      "./assets/screenshots/bookshelf_detail.png",
+      "./assets/screenshots/bookshelf_ambient_hook.png"
+    ]
+  }
+}

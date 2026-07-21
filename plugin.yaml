@@ -1,0 +1,6 @@
+name: bookshelf
+version: 1.0.0
+description: A book-discovery skill and opt-in ambient quote companion
+author: Amal David
+provides_hooks:
+  - transform_llm_output

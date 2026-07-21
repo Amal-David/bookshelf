@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bookshelf"
+  short_description: "Discover books and contextual quotes"
+  default_prompt: "Use $bookshelf to share a fitting book quote for this moment."

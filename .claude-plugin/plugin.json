@@ -1,0 +1,18 @@
+{
+  "name": "bookshelf",
+  "version": "1.0.0",
+  "description": "Discover 983 books and bring contextual literary quotes into agent sessions.",
+  "author": {
+    "name": "Amal David"
+  },
+  "repository": "https://github.com/Amal-David/bookshelf",
+  "license": "MIT",
+  "keywords": [
+    "books",
+    "quotes",
+    "reading",
+    "agent-skills"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "bookshelf",
+  "owner": {
+    "name": "Amal David"
+  },
+  "metadata": {
+    "description": "A focused book-discovery and ambient quote plugin."
+  },
+  "plugins": [
+    {
+      "name": "bookshelf",
+      "source": "./",
+      "description": "Discover books and receive contextual literary quotes.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Amal David"
+      }
+    }
+  ]
+}

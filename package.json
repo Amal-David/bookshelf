@@ -1,0 +1,27 @@
+{
+  "name": "ambient-bookshelf",
+  "version": "1.0.0",
+  "description": "A native Bookshelf skill and ambient quote companion for Pi.",
+  "license": "MIT",
+  "author": "Amal David",
+  "homepage": "https://github.com/Amal-David/bookshelf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amal-David/bookshelf.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "agent-skills",
+    "books",
+    "quotes"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/bookshelf.ts"
+    ],
+    "skills": [
+      "./skills/bookshelf"
+    ]
+  }
+}

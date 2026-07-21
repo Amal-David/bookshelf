@@ -1,0 +1,20 @@
+{
+  "name": "bookshelf",
+  "interface": {
+    "displayName": "Bookshelf"
+  },
+  "plugins": [
+    {
+      "name": "bookshelf",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Bookshelf</title>
+  <rect width="256" height="256" rx="56" fill="#241A14"/>
+  <rect x="42" y="48" width="38" height="148" rx="8" fill="#D9A066"/>
+  <rect x="87" y="64" width="34" height="132" rx="7" fill="#F1D3A7"/>
+  <path d="M133 52h38c7 0 12 5 12 12v132h-50z" fill="#B86E45"/>
+  <path d="M190 78l26-7 29 114-26 7z" fill="#E3B778"/>
+  <rect x="30" y="196" width="196" height="16" rx="8" fill="#F7E8CF"/>
+</svg>
