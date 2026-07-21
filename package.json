@@ -1,10 +1,10 @@
 {
   "name": "ambient-bookshelf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A native Bookshelf skill and ambient quote companion for Pi.",
   "license": "MIT",
   "author": "Amal David",
-  "homepage": "https://github.com/Amal-David/bookshelf",
+  "homepage": "https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/",
   "repository": {
     "type": "git",
     "url": "https://github.com/Amal-David/bookshelf.git"

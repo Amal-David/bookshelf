@@ -4,14 +4,13 @@ from __future__ import annotations
 
 from bookshelf.skill.config import (
     get_ambient_cadence,
+    get_ambient_intent,
     is_ambient_enabled,
-    load_hook_state,
-    save_hook_state,
 )
 from bookshelf.skill.quote_picker import (
-    format_quote_message,
+    INTENT_TAGS,
+    format_ambient_quote_message,
     pick_quote,
-    total_quote_count,
 )
 
 _COUNTER_KEYS = {
@@ -41,15 +40,22 @@ def ambient_quote(
             normalized_host,
             f"{normalized_host or 'unknown'}_turn_count",
         )
-        state = load_hook_state()
-        turn_count = int(state.get(counter_key, 0)) + 1
-        state[counter_key] = turn_count
-        save_hook_state(state)
+        from bookshelf.skill.quote_state import QuoteStateStore
+
+        store = QuoteStateStore()
+        # A state recovery must be acknowledged by an interactive command.
+        # Ambient adapters never announce it or resume delivery on their own.
+        if store.recovery_notice_pending():
+            return None
+        turn_count = store.increment_counter(counter_key)
 
         cadence = get_ambient_cadence(normalized_host)
         if turn_count % cadence != 0:
             return None
-        return pick_quote(context_tags)
+        selected_tags = list(context_tags or ())
+        if not selected_tags:
+            selected_tags.extend(INTENT_TAGS[get_ambient_intent()])
+        return pick_quote(selected_tags, ambient_only=True)
     except Exception:
         return None
 
@@ -64,6 +70,6 @@ def ambient_message(
     if not quote:
         return None
     try:
-        return format_quote_message(quote, total_quote_count())
+        return format_ambient_quote_message(quote)
     except Exception:
         return None

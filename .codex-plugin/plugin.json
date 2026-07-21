@@ -1,12 +1,12 @@
 {
   "name": "bookshelf",
-  "version": "1.0.0",
-  "description": "Discover 983 books and bring contextual literary quotes into agent sessions.",
+  "version": "1.1.0",
+  "description": "Bring a local, relevance-aware literary quote into the work you name.",
   "author": {
     "name": "Amal David",
     "url": "https://github.com/Amal-David"
   },
-  "homepage": "https://github.com/Amal-David/bookshelf",
+  "homepage": "https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/",
   "repository": "https://github.com/Amal-David/bookshelf",
   "license": "MIT",
   "keywords": [
@@ -16,17 +16,17 @@
     "agent-skills"
   ],
   "skills": "./skills/",
-  "hooks": "./hooks/hooks.json",
+  "hooks": "./hooks/codex-hooks.json",
   "interface": {
     "displayName": "Bookshelf",
     "shortDescription": "Books and contextual quotes for your work",
-    "longDescription": "Browse a curated library of 983 books, request a fitting quote on demand, or opt in to a quiet ambient quote every few completed turns.",
+    "longDescription": "Browse 1,117 catalogued books, request a fitting quote with an explicit local intent, or opt in to a quiet ambient quote. Catalog provenance varies by record.",
     "developerName": "Amal David",
     "category": "Productivity",
     "capabilities": [
       "Read"
     ],
-    "websiteURL": "https://github.com/Amal-David/bookshelf",
+    "websiteURL": "https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/",
     "defaultPrompt": [
       "Share a fitting book quote for what I am working through.",
       "Give me a literary companion for this debugging session."

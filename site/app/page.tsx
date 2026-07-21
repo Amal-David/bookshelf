@@ -1,216 +1,118 @@
 const githubUrl = "https://github.com/Amal-David/bookshelf";
 
-const installs = [
-  {
-    host: "Codex",
-    label: "Desktop + CLI",
-    command:
-      "codex plugin marketplace add Amal-David/bookshelf\ncodex plugin add bookshelf@bookshelf",
-    behavior: "On-demand skill · optional Stop event banner",
-  },
-  {
-    host: "Claude",
-    label: "Claude Code",
-    command:
-      "/plugin marketplace add Amal-David/bookshelf\n/plugin install bookshelf@bookshelf",
-    behavior: "On-demand skill · optional lifecycle event",
-  },
-  {
-    host: "Hermes",
-    label: "Hermes Agent",
-    command: "hermes plugins install Amal-David/bookshelf --enable",
-    behavior: "On-demand skill · optional response footer",
-  },
-  {
-    host: "Pi",
-    label: "Pi coding agent",
-    command: "pi install git:github.com/Amal-David/bookshelf",
-    behavior: "On-demand skill · optional native notification",
-  },
+const catalogFacts = [
+  ["3,124", "quote records"],
+  ["3,111", "normalized unique texts"],
+  ["1,117", "catalogued books"],
+  ["949", "quoted works"],
+  ["585", "v2 primary-source-linked records pending human review"],
+  ["2,539", "legacy records explicitly unverified"],
 ];
 
-const genres = [
-  ["Fiction", "176"],
-  ["Science", "151"],
-  ["Motivation", "132"],
-  ["Philosophy", "132"],
-  ["History", "116"],
-  ["Psychology", "97"],
-  ["Startup", "96"],
-  ["Romance", "83"],
+const hostTiers = [
+  ["Codex Desktop + CLI", "Install the Bookshelf plugin, trust its Stop hook, and start a new chat."],
+  ["Claude Code", "Install from the Bookshelf marketplace; the same bounded Stop hook runs after completed turns."],
+  ["Pi + Hermes", "Native adapters are included for people who move between terminal agents."],
+  ["Private by default", "No prompt, transcript, command, path, source code, or model output becomes quote context."],
 ];
 
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Bookshelf home">
-          <span className="brand-mark" aria-hidden="true">
-            B
-          </span>
+          <span className="brand-mark" aria-hidden="true">B</span>
           <span>Bookshelf</span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#demo">Demo</a>
-          <a href="#install">Install</a>
-          <a className="github-link" href={githubUrl}>
-            GitHub ↗
-          </a>
+          <a href="#proof">Proof</a>
+          <a href="#catalog">Catalog</a>
+          <a className="github-link" href={githubUrl}>GitHub ↗</a>
         </nav>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">A literary companion for coding agents</p>
-          <h1>
-            A great book can meet you in the middle of{" "}
-            <em>the work.</em>
-          </h1>
-          <p className="hero-lede">
-            Bookshelf brings 2,539 carefully tagged quotes from 983 books into
-            Codex, Claude, Hermes, and Pi—on demand, or quietly after a task.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#install">
-              Install the skill
-            </a>
-            <a className="button button-secondary" href={githubUrl}>
-              View source ↗
-            </a>
-          </div>
-          <div className="hero-proof" aria-label="Catalog summary">
-            <span>
-              <strong>983</strong> books
-            </span>
-            <span>
-              <strong>2,539</strong> quotes
-            </span>
-            <span>
-              <strong>4</strong> agent hosts
-            </span>
-          </div>
-        </div>
-
-        <aside className="quote-card" aria-label="Featured quote">
-          <p className="card-index">B · 042</p>
-          <blockquote>
-            “What stands in the way becomes the way.”
-          </blockquote>
-          <div className="quote-meta">
-            <span>Marcus Aurelius</span>
-            <span>Meditations</span>
-          </div>
-          <div className="book-spine" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-        </aside>
-      </section>
-
-      <section className="demo-section" id="demo">
-        <div className="section-heading">
-          <p className="eyebrow">See it in the work</p>
-          <h2>A post-task note, not another interruption.</h2>
-          <p>
-            Finish the task. Keep your flow. When ambient mode is enabled and
-            its cadence is due, Bookshelf finds a quote that fits the moment.
-          </p>
-        </div>
-        <div className="video-frame">
-          <div className="video-bar">
-            <span>Bookshelf · agent session</span>
-            <span>20 sec · sound on</span>
-          </div>
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            poster="/bookshelf-poster.png"
-          >
-            <source src="/bookshelf-demo.mp4" type="video/mp4" />
-            Your browser does not support the demo video.
-          </video>
-        </div>
-      </section>
-
-      <section className="library-section">
-        <div className="library-intro">
-          <p className="eyebrow">The library</p>
-          <h2>Eight shelves. One useful thought at a time.</h2>
-          <p>
-            Every book includes editorial context and mood tags. Every quote
-            carries work-aware tags for moments like debugging, reviewing,
-            building, and shipping.
-          </p>
-        </div>
-        <div className="genre-ledger" aria-label="Books by genre">
-          {genres.map(([genre, count]) => (
-            <div className="genre-row" key={genre}>
-              <span>{genre}</span>
-              <span className="genre-dots" aria-hidden="true" />
-              <strong>{count}</strong>
+      <div id="main-content" tabIndex={-1}>
+        <section className="hero" id="top">
+          <div className="hero-copy">
+            <p className="eyebrow">Bookshelf for Codex + Claude Code</p>
+            <h1>Let the terminal <em>widen your world</em> while it works.</h1>
+            <p className="hero-lede">
+              Instead of staring at another tool call, meet one compact book
+              quote every few completed turns—enough to shift your perspective,
+              never enough to break your flow.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href={githubUrl}>Add Bookshelf to your agent ↗</a>
+              <a className="button button-secondary" href="#proof">Watch five turns</a>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="install-section" id="install">
-        <div className="section-heading">
-          <p className="eyebrow">One skill, four native surfaces</p>
-          <h2>Install it where you already build.</h2>
-          <p>
-            The skill is available immediately. Ambient mode remains off until
-            you enable it, and each host presents it through its own native
-            extension surface.
-          </p>
-        </div>
-        <div className="install-grid">
-          {installs.map((install) => (
-            <article className="install-card" key={install.host}>
-              <div className="install-card-header">
-                <h3>{install.host}</h3>
-                <span>{install.label}</span>
-              </div>
-              <pre>
-                <code>{install.command}</code>
-              </pre>
-              <p>{install.behavior}</p>
-            </article>
-          ))}
-        </div>
-        <div className="ambient-note">
-          <div>
-            <p className="eyebrow">Opt-in by design</p>
-            <h3>Quotes can never break the agent turn.</h3>
+            <div className="hero-proof" aria-label="Catalog summary">
+              <span><strong>5</strong> completed turns</span>
+              <span><strong>1</strong> widening thought</span>
+              <span><strong>0</strong> model calls</span>
+            </div>
           </div>
-          <code>bookshelf ambient enable --cadence 5</code>
-          <p>
-            Every adapter isolates its own failures. Codex and Claude surface
-            lifecycle events; Pi uses a native notification; Hermes can append
-            a footer after the response.
-          </p>
-        </div>
-      </section>
+          <aside className="quote-card" aria-label="Example Bookshelf result">
+            <p className="card-index">Turn 5 · quiet perspective</p>
+            <blockquote>“Do nothing which is of no use.”</blockquote>
+            <div className="quote-meta"><span>Miyamoto Musashi</span><span>The Book of Five Rings</span></div>
+            <div className="book-spine" aria-hidden="true"><span /><span /><span /><span /></div>
+          </aside>
+        </section>
 
-      <section className="final-cta">
-        <p className="eyebrow">Keep the books close</p>
-        <h2>Open the shelf when the work needs perspective.</h2>
-        <div className="hero-actions">
-          <a className="button button-light" href={githubUrl}>
-            Get Bookshelf on GitHub ↗
-          </a>
-          <a className="text-link" href="#top">
-            Back to the beginning ↑
-          </a>
-        </div>
-      </section>
+        <section className="demo-section" id="proof">
+          <div className="section-heading">
+            <p className="eyebrow">Real Stop-hook CLI capture</p>
+            <h2>Five completed turns. One thought worth keeping.</h2>
+            <p>The same packaged Stop hook runs in Codex and Claude Code, stays silent for four turns, then surfaces one compact quote.</p>
+          </div>
+          <pre className="proof-terminal"><code>$ bookshelf quote --intent refactor{"\n\n"}“Do nothing which is of no use.” — Miyamoto Musashi, The Book of Five Rings{"\n\n"}$ bookshelf feedback up|down</code></pre>
+          <div className="video-frame">
+            <div className="video-bar"><span>Bookshelf · Codex + Claude Code Stop hook</span><span>real isolated CLI capture</span></div>
+            <video controls playsInline preload="metadata" poster="/bookshelf-poster.png">
+              <source src="/bookshelf-demo.mp4" type="video/mp4" />
+              Your browser does not support the demo video.
+            </video>
+          </div>
+          <details className="transcript"><summary>Transcript and summary</summary><p>This real isolated terminal capture invokes the packaged <code>Stop</code> hook five times. The first four calls stay silent. After the fifth, Bookshelf emits “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. Codex Desktop and Claude Code load this same hook; the video intentionally shows only its CLI behavior.</p></details>
+        </section>
 
-      <footer>
-        <span>Bookshelf · MIT-licensed software</span>
-        <span>Built for Codex · Claude · Hermes · Pi</span>
-      </footer>
+        <section className="library-section" id="catalog">
+          <div className="library-intro">
+            <p className="eyebrow">A library behind the moment</p>
+            <h2>Browse when you want. Be surprised when you don&apos;t.</h2>
+            <p>The terminal library is the deeper layer: search books, keep reading lists, and request a quote for a named intent. Ambient delivery is the front door.</p>
+          </div>
+          <div className="catalog-ledger" aria-label="Catalog counts">
+            {catalogFacts.map(([count, label]) => <div className="genre-row" key={label}><strong>{count}</strong><span className="genre-dots" aria-hidden="true" /><span>{label}</span></div>)}
+          </div>
+        </section>
+
+        <section className="install-section" id="hosts">
+          <div className="section-heading">
+            <p className="eyebrow">Where it meets you</p>
+            <h2>Inside the coding session—not in another tab.</h2>
+            <p>Bookshelf is packaged for Codex Desktop, Codex CLI, and Claude Code, with Pi and Hermes adapters for terminal-agent users.</p>
+          </div>
+          <div className="install-grid">
+            {hostTiers.map(([title, detail]) => <article className="install-card" key={title}><h3>{title}</h3><p>{detail}</p></article>)}
+          </div>
+          <div className="ambient-note">
+            <div><p className="eyebrow">Bounded by design</p><h3>Enough context to be useful. Nothing else.</h3></div>
+            <code>bookshelf quote --intent refactor</code>
+            <p>Bookshelf accepts an explicit local intent only—never commands, paths, prompts, transcripts, code, tool arguments, model output, or network calls. Ambient is optional, off by default, and fails closed.</p>
+          </div>
+        </section>
+
+        <section className="final-cta">
+          <p className="eyebrow">Make the waiting useful</p>
+          <h2>Let every few turns leave you a little less narrow.</h2>
+          <div className="hero-actions"><a className="button button-light" href={githubUrl}>Get Bookshelf on GitHub ↗</a><a className="text-link" href="#top">Back to the beginning ↑</a></div>
+        </section>
+      </div>
+      <footer><span>Bookshelf · MIT-licensed software</span><span>Catalog provenance varies by record</span></footer>
     </main>
   );
 }

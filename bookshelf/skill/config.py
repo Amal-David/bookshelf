@@ -99,3 +99,15 @@ def get_ambient_cadence(host: str) -> int:
         return max(1, int(value))
     except (TypeError, ValueError, OSError):
         return DEFAULT_AMBIENT_CADENCE
+
+
+def get_ambient_intent() -> str:
+    """Return the user's explicit local theme for context-free Stop hooks."""
+    try:
+        from bookshelf.skill.quote_picker import ALLOWED_INTENTS
+        from bookshelf.storage import load_config
+
+        value = str(load_config().get("ambient_intent", "neutral")).casefold().strip()
+        return value if value in ALLOWED_INTENTS else "neutral"
+    except (TypeError, ValueError, OSError):
+        return "neutral"

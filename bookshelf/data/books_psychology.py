@@ -1080,7 +1080,7 @@ PSYCHOLOGY_BOOKS = [
         "year": 2016,
         "genre": "psychology",
         "mood": ["hustle mode", "productivity", "career pivot"],
-        "summary": "Ericsson reveals the science of deliberate practice and shows that expert performance is far more trainable than we think.",
+        "summary": "Anders Ericsson and science writer Robert Pool examine the research program that made deliberate practice a central idea in discussions of expertise. They distinguish merely repeating a task from practice designed around a specific skill, immediate feedback, sustained attention, and progressive difficulty. The book follows examples from music, chess, sport, medicine, and professional work to explain how experts build mental representations that make patterns easier to notice and decisions easier to revise. It also addresses the popular 10,000-hour shorthand associated with Ericsson's work, emphasizing that the quality and structure of training matter more than an isolated hour count. The authors discuss the role of coaching, established standards, and motivation without claiming that every field offers an identical path to mastery. Peak is most useful for readers who want to think carefully about how skill grows, whether they are learning a technical craft, teaching someone else, or redesigning a practice routine. Its enduring contribution is a more precise vocabulary for asking what a learner is actually practicing, how feedback reaches them, and what evidence would show that the next attempt is better than the last.",
     },
     {
         "title": "Dopamine Nation",

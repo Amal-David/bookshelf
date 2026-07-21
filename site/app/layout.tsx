@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bookshelf — Ambient book quotes for coding agents",
+  title: "Bookshelf — Book quotes inside Codex and Claude Code",
   description:
-    "2,539 curated quotes from 983 books, available as an Agent Skill for Codex, Claude, Hermes, and Pi.",
+    "Turn the pauses between Codex and Claude Code turns into a small literary reset with one compact, locally selected book quote.",
   keywords: [
     "Agent Skills",
     "Codex",
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "quotes",
   ],
   openGraph: {
-    title: "Bookshelf — Keep the books close",
+    title: "Bookshelf — Let the terminal widen your world",
     description:
-      "A terminal library and ambient quote companion for AI coding agents.",
+      "A quiet book quote inside your Codex or Claude Code session, every few completed turns.",
     type: "website",
     images: [
       "https://raw.githubusercontent.com/Amal-David/bookshelf/main/site/public/og-preview.png",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bookshelf — Keep the books close",
+    title: "Bookshelf — Let the terminal widen your world",
     description:
-      "A terminal library and ambient quote companion for AI coding agents.",
+      "A quiet book quote inside your Codex or Claude Code session, every few completed turns.",
     images: [
       "https://raw.githubusercontent.com/Amal-David/bookshelf/main/site/public/og-preview.png",
     ],

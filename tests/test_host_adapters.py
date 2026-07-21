@@ -44,6 +44,26 @@ class HostAdapterTests(unittest.TestCase):
             {"systemMessage": "A due quote"},
         )
 
+    def test_pi_no_event_adapter_can_deliver_without_stdin(self) -> None:
+        hook = _load_module("bookshelf_pi_hook", ROOT / "hooks" / "ambient.py")
+        output = io.StringIO()
+        with mock.patch(
+            "bookshelf.ambient.ambient_message",
+            return_value="A due quote",
+        ), mock.patch("sys.stdout", output):
+            self.assertEqual(hook.main(["--host", "pi", "--plain", "--no-event"]), 0)
+        self.assertEqual(output.getvalue(), "A due quote\n")
+
+    def test_pi_extension_has_an_explicit_minimal_child_environment(self) -> None:
+        extension = (ROOT / "extensions" / "bookshelf.ts").read_text(encoding="utf-8")
+        self.assertIn("AMBIENT_ENV_KEYS", extension)
+        self.assertIn('"PATH"', extension)
+        self.assertIn('"HOME"', extension)
+        self.assertIn('"BOOKSHELF_AMBIENT_ENABLED"', extension)
+        self.assertIn('"--no-event"', extension)
+        self.assertIn("env: ambientEnvironment()", extension)
+        self.assertNotIn("env: process.env", extension)
+
     def test_hermes_registers_hook_and_canonical_skill(self) -> None:
         plugin = _load_module("bookshelf_hermes_plugin", ROOT / "__init__.py")
 
@@ -81,6 +101,11 @@ class HostAdapterTests(unittest.TestCase):
                 plugin._transform_llm_output("Original"),
                 "Original\n\nA due quote",
             )
+
+    def test_hermes_has_no_child_process_or_inherited_environment(self) -> None:
+        source = (ROOT / "__init__.py").read_text(encoding="utf-8")
+        self.assertNotIn("subprocess", source)
+        self.assertNotIn("os.environ", source)
 
 
 if __name__ == "__main__":

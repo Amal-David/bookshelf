@@ -10,6 +10,17 @@ class Quote:
     author: str
     chapter: str  # empty string if unknown
     tags: list[str]  # for context matching in the agent skill
+    quote_id: str = ""
+    work_id: str = ""
+    source_identifier: str = "legacy-catalog"
+    source_url: str = ""
+    source_locator: str = ""
+    rights_class: str = "legacy-unknown"
+    rights_jurisdiction_note: str = ""
+    verification_state: str = "legacy-unverified"
+    admission_state: str = "legacy"
+    verified_at: str = ""
+    digest_sha256: str = ""
 
 
 # Tags should be from this set for context matching:
@@ -3556,7 +3567,7 @@ QUOTES = [
         tags=["love", "ambition"],
     ),
     Quote(
-        text="I was a survivor, and I was strong. I would not be weak, or helpless again. I would not, could not, parsing be broken.",
+        text="I was a survivor, and I was strong. I would not be weak, or helpless again.",
         book_title="A Court of Thorns and Roses",
         author="Sarah J. Maas",
         chapter="",
@@ -3656,7 +3667,7 @@ def _merge_and_dedup(*quote_lists: list) -> list:
     return merged
 
 
-QUOTES = _merge_and_dedup(
+LEGACY_QUOTES = _merge_and_dedup(
     QUOTES,
     FICTION_QUOTES,
     ROMANCE_EXTRA_QUOTES,
@@ -3667,3 +3678,36 @@ QUOTES = _merge_and_dedup(
     MOTIVATION_EXTRA_QUOTES,
     STARTUP_EXTRA_QUOTES,
 )
+
+
+def _primary_source_quotes() -> list[Quote]:
+    """Convert the compiler-produced primary-source records to runtime quotes."""
+    from bookshelf.data.catalog_v2 import load_v2_quotes
+
+    return [
+        Quote(
+            text=record["text"],
+            book_title=record["book_title"],
+            author=record["author"],
+            chapter=record.get("chapter", ""),
+            tags=list(record.get("context_tags", [])),
+            quote_id=record["quote_id"],
+            work_id=record["work_id"],
+            source_identifier=record["source_identifier"],
+            source_url=record["source_url"],
+            source_locator=record["locator"],
+            rights_class=record["rights_class"],
+            rights_jurisdiction_note=record["rights_jurisdiction_note"],
+            verification_state=record["verification_state"],
+            admission_state=record["admission_state"],
+            verified_at=record["verified_at"],
+            digest_sha256=record["digest_sha256"],
+        )
+        for record in load_v2_quotes()
+    ]
+
+
+# Legacy records deliberately retain their provenance boundary. New records are
+# sourced from the generated, primary-source reviewed catalog and therefore do
+# not share the legacy prefix-only deduplication path.
+QUOTES = LEGACY_QUOTES + _primary_source_quotes()

@@ -59,6 +59,26 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  background: var(--forest-dark);
+  color: var(--paper-light);
+  left: 16px;
+  padding: 12px 16px;
+  position: absolute;
+  top: -80px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
 ::selection {
   background: var(--rose);
   color: var(--forest-dark);
@@ -334,6 +354,30 @@ blockquote {
   box-shadow: 16px 16px 0 var(--rose);
 }
 
+.proof-terminal {
+  margin-bottom: 38px;
+  max-width: 100%;
+}
+
+.transcript {
+  border: 1px solid rgba(241, 236, 217, 0.35);
+  border-top: 0;
+  padding: 18px;
+}
+
+.transcript summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.transcript p {
+  line-height: 1.5;
+  margin: 16px 0 0;
+}
+
 .video-bar {
   display: flex;
   font-family: var(--mono);
@@ -365,6 +409,10 @@ video {
 }
 
 .genre-ledger {
+  border-top: 1px solid var(--ink);
+}
+
+.catalog-ledger {
   border-top: 1px solid var(--ink);
 }
 
@@ -419,6 +467,14 @@ video {
 .install-card h3 {
   font-size: 38px;
   font-weight: 400;
+}
+
+.install-card > p {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 .install-card-header span,

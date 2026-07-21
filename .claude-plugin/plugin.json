@@ -1,7 +1,7 @@
 {
   "name": "bookshelf",
-  "version": "1.0.0",
-  "description": "Discover 983 books and bring contextual literary quotes into agent sessions.",
+  "version": "1.1.0",
+  "description": "Bring a local, relevance-aware literary quote into the work you name.",
   "author": {
     "name": "Amal David"
   },

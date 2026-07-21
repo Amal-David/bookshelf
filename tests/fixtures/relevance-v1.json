@@ -1,0 +1,1863 @@
+{
+  "version": "relevance-v2",
+  "schema": "normalized-event-fixture-v1",
+  "notes": "Each case contains only normalized event labels. It deliberately excludes commands, paths, prompts, transcripts, model output, and repository names.",
+  "cases": [
+    {
+      "id": "debug-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "debug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "fix-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "error-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "bug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "debug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "fix-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "error-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "bug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "debug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "fix-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "error-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "debug-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "bug-operation"
+      },
+      "expected_intents": [
+        "debug"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "test-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "verify-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "assert-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "tests-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "test-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "verify-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "assert-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "tests-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "test-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "verify-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "assert-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "verify-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "tests-operation"
+      },
+      "expected_intents": [
+        "verify"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "build-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "compile-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "package-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "create-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "build-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "compile-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "package-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "create-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "build-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "compile-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "package-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "build-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "create-operation"
+      },
+      "expected_intents": [
+        "build"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "ship-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "deploy-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "release-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "publish-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "ship-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "deploy-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "release-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "publish-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "ship-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "deploy-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "release-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "ship-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "publish-operation"
+      },
+      "expected_intents": [
+        "ship"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "review-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "comment-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "audit-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "review-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "comment-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "audit-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "review-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "comment-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "audit-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "review-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "comment-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "review-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "audit-operation"
+      },
+      "expected_intents": [
+        "review"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "refactor-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "simplify-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "cleanup-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "optimize-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "refactor-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "simplify-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "cleanup-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "optimize-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "refactor-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "simplify-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "cleanup-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "refactor-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "optimize-operation"
+      },
+      "expected_intents": [
+        "refactor"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "collaborate-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "team-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "pair-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "handoff-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "collaborate-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "team-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "pair-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "handoff-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "collaborate-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "team-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "pair-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "collaborate-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "handoff-operation"
+      },
+      "expected_intents": [
+        "collaborate"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-01",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "recover-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-02",
+      "kind": "positive",
+      "metadata": {
+        "event": "rollback-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-03",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "retry-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-04",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "restore-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-05",
+      "kind": "positive",
+      "metadata": {
+        "event": "recover-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-06",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "rollback-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-07",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "retry-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-08",
+      "kind": "positive",
+      "metadata": {
+        "event": "restore-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-09",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "recover-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-10",
+      "kind": "positive",
+      "metadata": {
+        "tool_name": "rollback-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-11",
+      "kind": "positive",
+      "metadata": {
+        "event": "retry-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "recover-12",
+      "kind": "positive",
+      "metadata": {
+        "event_name": "restore-operation"
+      },
+      "expected_intents": [
+        "recover"
+      ],
+      "minimum_tag_matches": 2
+    },
+    {
+      "id": "neutral-01",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-02",
+      "kind": "neutral",
+      "metadata": {
+        "event": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-03",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-04",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-05",
+      "kind": "neutral",
+      "metadata": {
+        "event": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-06",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-07",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-08",
+      "kind": "neutral",
+      "metadata": {
+        "event": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-09",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-10",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-11",
+      "kind": "neutral",
+      "metadata": {
+        "event": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-12",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-13",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-14",
+      "kind": "neutral",
+      "metadata": {
+        "event": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-15",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-16",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-17",
+      "kind": "neutral",
+      "metadata": {
+        "event": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-18",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-19",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-20",
+      "kind": "neutral",
+      "metadata": {
+        "event": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-21",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-22",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-23",
+      "kind": "neutral",
+      "metadata": {
+        "event": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-24",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-25",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-26",
+      "kind": "neutral",
+      "metadata": {
+        "event": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-27",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-28",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-29",
+      "kind": "neutral",
+      "metadata": {
+        "event": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-30",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-31",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-32",
+      "kind": "neutral",
+      "metadata": {
+        "event": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-33",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-34",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-35",
+      "kind": "neutral",
+      "metadata": {
+        "event": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-36",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "idle-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-37",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "status-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-38",
+      "kind": "neutral",
+      "metadata": {
+        "event": "heartbeat-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-39",
+      "kind": "neutral",
+      "metadata": {
+        "event_name": "session-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "neutral-40",
+      "kind": "neutral",
+      "metadata": {
+        "tool_name": "overview-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-01",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "debugger-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-02",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "relationship-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-03",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "passive-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-04",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "rebuilding-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-05",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "testimony-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-06",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "commentary-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-07",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "teamwork-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-08",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "restoration-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-09",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "debugger-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-10",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "relationship-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-11",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "passive-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-12",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "rebuilding-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-13",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "testimony-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-14",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "commentary-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-15",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "teamwork-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-16",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "restoration-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-17",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "debugger-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-18",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "relationship-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-19",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "passive-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-20",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "rebuilding-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-21",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "testimony-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-22",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "commentary-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-23",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "teamwork-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-24",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "restoration-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-25",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "debugger-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-26",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "relationship-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-27",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "passive-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-28",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "rebuilding-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-29",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "testimony-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-30",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "commentary-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-31",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "teamwork-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-32",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "restoration-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-33",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "debugger-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-34",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "relationship-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-35",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "passive-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-36",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "rebuilding-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-37",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "testimony-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-38",
+      "kind": "adversarial",
+      "metadata": {
+        "event": "commentary-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-39",
+      "kind": "adversarial",
+      "metadata": {
+        "event_name": "teamwork-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    },
+    {
+      "id": "adversarial-40",
+      "kind": "adversarial",
+      "metadata": {
+        "tool_name": "restoration-notice"
+      },
+      "expected_intents": [
+        "neutral"
+      ]
+    }
+  ]
+}
