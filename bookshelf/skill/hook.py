@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""PostToolUse hook for Claude Code — shows a book quote every Nth tool call.
+"""Deprecated compatibility adapter for legacy Claude Code PostToolUse setup.
 
-Tracks which quotes have been shown and how many times, so you get
-variety across your session. Quotes are deprioritized after being shown
-and only repeat once the full pool is exhausted.
+New installs use the bundled Claude plugin ``Stop`` hook.  This file remains
+only for users who explicitly configured its old path; it now delegates to the
+same opt-in, fail-closed ambient core as the bundled adapter.
 
 Install by adding to ~/.claude/settings.json:
 {
@@ -43,45 +43,37 @@ from bookshelf.skill.quote_picker import (  # noqa: E402,F401
     total_quote_count,
 )
 
+HOOK_INPUT_MAX_BYTES = 16 * 1024
+
+
+def read_hook_input() -> dict | None:
+    """Read one bounded JSON event without retaining its raw bytes."""
+    try:
+        raw = sys.stdin.buffer.read(HOOK_INPUT_MAX_BYTES + 1)
+    except (AttributeError, OSError):
+        return None
+    if len(raw) > HOOK_INPUT_MAX_BYTES:
+        return None
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return None
+    return payload if isinstance(payload, dict) else None
+
 
 def main():
+    input_data = read_hook_input()
+    if input_data is None:
+        print(json.dumps({}))
+        return
+
     try:
-        input_data = json.load(sys.stdin)
-    except (json.JSONDecodeError, Exception):
-        input_data = {}
+        from bookshelf.ambient import ambient_message
 
-    from bookshelf.skill.config import (
-        get_cadence,
-        is_context_matching_enabled,
-        load_hook_state,
-        save_hook_state,
-    )
-
-    state = load_hook_state()
-    call_count = state.get("call_count", 0) + 1
-    state["call_count"] = call_count
-    save_hook_state(state)
-
-    cadence = get_cadence()
-
-    if call_count % cadence != 0:
+        message = ambient_message("claude", context_tags=get_context_tags(input_data))
+        print(json.dumps({"systemMessage": message} if message else {}))
+    except Exception:
         print(json.dumps({}))
-        return
-
-    context_tags = None
-    if is_context_matching_enabled():
-        context_tags = get_context_tags(input_data)
-
-    quote = pick_quote(context_tags)
-
-    if not quote:
-        print(json.dumps({}))
-        return
-
-    message = format_quote_message(quote, total_quote_count())
-
-    result = {"systemMessage": message}
-    print(json.dumps(result))
 
 
 if __name__ == "__main__":

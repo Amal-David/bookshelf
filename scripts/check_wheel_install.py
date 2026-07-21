@@ -67,7 +67,7 @@ def main() -> int:
             env=clean_env,
         ).stdout
         payload = json.loads(quote)
-        if version != "bookshelf 1.0.0":
+        if version != "bookshelf 1.1.0":
             raise SystemExit(f"unexpected version: {version}")
         if not {"text", "author", "book"} <= payload.keys():
             raise SystemExit("quote response is missing required fields")

@@ -1,0 +1,1589 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-07-19",
+  "purpose": "Candidate public-domain quote sources for Bookshelf corpus expansion; must be title+author deduplicated against the existing corpus before ingestion.",
+  "provider": {
+    "name": "Standard Ebooks",
+    "catalogue_url": "https://standardebooks.org/ebooks",
+    "opds_url": "https://standardebooks.org/feeds/opds",
+    "source_organisation_url": "https://github.com/standardebooks",
+    "rights_class": "The Standard Ebooks edition work is dedicated to the public domain via CC0 1.0; the underlying texts are believed to be in the U.S. public domain.",
+    "jurisdiction_note": "US-focused clearance only. Retain the exact source commit and independently assess distribution jurisdictions outside the United States.",
+    "evidence_urls": [
+      "https://standardebooks.org/about/standard-ebooks-and-the-public-domain",
+      "https://standardebooks.org/ebooks?query=start",
+      "https://www.gutenberg.org/policy/permission"
+    ]
+  },
+  "extraction_contract": {
+    "reliable_text_format": "EPUB3 XHTML in each repository's src/epub/text/ directory",
+    "include": "Reading text and authorial epigraphs only",
+    "exclude": "Colophon, title page, imprint, copyright notices, endnotes unless explicitly authored text",
+    "locator_strategy": "Record the repository identifier, XHTML relative path and paragraph locator, normalized excerpt SHA-256, and extraction-snapshot SHA-256. Immutable commit pins were not captured for this release, so records remain review-pending.",
+    "ingestion_gate": "Reject if the repository's license/readme no longer states public-domain/CC0 status, if a title+author already exists, or if source text cannot be located exactly."
+  },
+  "candidate_count": 195,
+  "candidates": [
+    {
+      "author": "Alexandre Dumas",
+      "work": "The Black Tulip",
+      "source_identifier": "standardebooks/alexandre-dumas_the-black-tulip_p-f-collier-and-son",
+      "source_url": "https://github.com/standardebooks/alexandre-dumas_the-black-tulip_p-f-collier-and-son",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Black Tulip, by Alexandre Dumas. Translated by P. F. Collier & Son",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Alexandre Dumas",
+      "work": "The Three Musketeers",
+      "source_identifier": "standardebooks/alexandre-dumas_the-three-musketeers_william-robson",
+      "source_url": "https://github.com/standardebooks/alexandre-dumas_the-three-musketeers_william-robson",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Three Musketeers, by Alexandre Dumas. Translated by William Robson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Alexandre Dumas",
+      "work": "The Wolf-Leader",
+      "source_identifier": "standardebooks/alexandre-dumas_the-wolf-leader_alfred-allinson",
+      "source_url": "https://github.com/standardebooks/alexandre-dumas_the-wolf-leader_alfred-allinson",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Wolf-Leader, by Alexandre Dumas. Translated by Alfred Allinson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Alfred, Lord Tennyson",
+      "work": "Idylls of the King",
+      "source_identifier": "standardebooks/alfred-lord-tennyson_idylls-of-the-king",
+      "source_url": "https://github.com/standardebooks/alfred-lord-tennyson_idylls-of-the-king",
+      "edition_description": "Epub source for the Standard Ebooks edition of Idylls of the King, by Alfred, Lord Tennyson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Anton Chekhov",
+      "work": "The Cherry Orchard",
+      "source_identifier": "standardebooks/anton-chekhov_the-cherry-orchard_constance-garnett",
+      "source_url": "https://github.com/standardebooks/anton-chekhov_the-cherry-orchard_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Cherry Orchard, by Anton Chekhov. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Anton Chekhov",
+      "work": "The Seagull",
+      "source_identifier": "standardebooks/anton-chekhov_the-seagull_constance-garnett",
+      "source_url": "https://github.com/standardebooks/anton-chekhov_the-seagull_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Seagull, by Anton Chekhov. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Anton Chekhov",
+      "work": "Uncle Vanya",
+      "source_identifier": "standardebooks/anton-chekhov_uncle-vanya_constance-garnett",
+      "source_url": "https://github.com/standardebooks/anton-chekhov_uncle-vanya_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of Uncle Vanya, by Anton Chekhov. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "A Study in Scarlet",
+      "source_identifier": "standardebooks/arthur-conan-doyle_a-study-in-scarlet",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_a-study-in-scarlet",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Study in Scarlet, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "The Adventures of Sherlock Holmes",
+      "source_identifier": "standardebooks/arthur-conan-doyle_the-adventures-of-sherlock-holmes",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_the-adventures-of-sherlock-holmes",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Adventures of Sherlock Holmes, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "The Hound of the Baskervilles",
+      "source_identifier": "standardebooks/arthur-conan-doyle_the-hound-of-the-baskervilles",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_the-hound-of-the-baskervilles",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Hound of the Baskervilles, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "The Maracot Deep",
+      "source_identifier": "standardebooks/arthur-conan-doyle_the-maracot-deep",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_the-maracot-deep",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Maracot Deep, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "The Return of Sherlock Holmes",
+      "source_identifier": "standardebooks/arthur-conan-doyle_the-return-of-sherlock-holmes",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_the-return-of-sherlock-holmes",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Return of Sherlock Holmes, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Arthur Conan Doyle",
+      "work": "The Valley of Fear",
+      "source_identifier": "standardebooks/arthur-conan-doyle_the-valley-of-fear",
+      "source_url": "https://github.com/standardebooks/arthur-conan-doyle_the-valley-of-fear",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Valley of Fear, by Arthur Conan Doyle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "August Strindberg",
+      "work": "The Inferno",
+      "source_identifier": "standardebooks/august-strindberg_the-inferno_claud-field",
+      "source_url": "https://github.com/standardebooks/august-strindberg_the-inferno_claud-field",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Inferno, by August Strindberg. Translated by Claud Field",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Boethius",
+      "work": "The Consolation of Philosophy",
+      "source_identifier": "standardebooks/boethius_the-consolation-of-philosophy_h-r-james",
+      "source_url": "https://github.com/standardebooks/boethius_the-consolation-of-philosophy_h-r-james",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Consolation of Philosophy, by Boethius. Translated by H. R. James",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "A Christmas Carol",
+      "source_identifier": "standardebooks/charles-dickens_a-christmas-carol",
+      "source_url": "https://github.com/standardebooks/charles-dickens_a-christmas-carol",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Christmas Carol, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "Barnaby Rudge",
+      "source_identifier": "standardebooks/charles-dickens_barnaby-rudge",
+      "source_url": "https://github.com/standardebooks/charles-dickens_barnaby-rudge",
+      "edition_description": "Epub source for the Standard Ebooks edition of Barnaby Rudge, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "David Copperfield",
+      "source_identifier": "standardebooks/charles-dickens_david-copperfield",
+      "source_url": "https://github.com/standardebooks/charles-dickens_david-copperfield",
+      "edition_description": "Epub source for the Standard Ebooks edition of David Copperfield, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "Great Expectations",
+      "source_identifier": "standardebooks/charles-dickens_great-expectations",
+      "source_url": "https://github.com/standardebooks/charles-dickens_great-expectations",
+      "edition_description": "Epub source for the Standard Ebooks edition of Great Expectations, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "Little Dorrit",
+      "source_identifier": "standardebooks/charles-dickens_little-dorrit",
+      "source_url": "https://github.com/standardebooks/charles-dickens_little-dorrit",
+      "edition_description": "Epub source for the Standard Ebooks edition of Little Dorrit, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "Nicholas Nickleby",
+      "source_identifier": "standardebooks/charles-dickens_nicholas-nickleby",
+      "source_url": "https://github.com/standardebooks/charles-dickens_nicholas-nickleby",
+      "edition_description": "Epub source for the Standard Ebooks edition of Nicholas Nickleby, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "Our Mutual Friend",
+      "source_identifier": "standardebooks/charles-dickens_our-mutual-friend",
+      "source_url": "https://github.com/standardebooks/charles-dickens_our-mutual-friend",
+      "edition_description": "Epub source for the Standard Ebooks edition of Our Mutual Friend, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charles Dickens",
+      "work": "The Old Curiosity Shop",
+      "source_identifier": "standardebooks/charles-dickens_the-old-curiosity-shop",
+      "source_url": "https://github.com/standardebooks/charles-dickens_the-old-curiosity-shop",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Old Curiosity Shop, by Charles Dickens",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charlotte Brontë",
+      "work": "Jane Eyre: An Autobiography",
+      "source_identifier": "standardebooks/charlotte-bronte_jane-eyre",
+      "source_url": "https://github.com/standardebooks/charlotte-bronte_jane-eyre",
+      "edition_description": "Epub source for the Standard Ebooks edition of Jane Eyre: An Autobiography, by Charlotte Brontë",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Charlotte Brontë",
+      "work": "Villette",
+      "source_identifier": "standardebooks/charlotte-bronte_villette",
+      "source_url": "https://github.com/standardebooks/charlotte-bronte_villette",
+      "edition_description": "Epub source for the Standard Ebooks edition of Villette, by Charlotte Brontë",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Confucius",
+      "work": "Analects",
+      "source_identifier": "standardebooks/confucius_analects_james-legge",
+      "source_url": "https://github.com/standardebooks/confucius_analects_james-legge",
+      "edition_description": "Epub source for the Standard Ebooks edition of Analects, by Confucius. Translated by James Legge",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Daniel Defoe",
+      "work": "Moll Flanders",
+      "source_identifier": "standardebooks/daniel-defoe_moll-flanders",
+      "source_url": "https://github.com/standardebooks/daniel-defoe_moll-flanders",
+      "edition_description": "Epub source for the Standard Ebooks edition of Moll Flanders, by Daniel Defoe",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "David Hume",
+      "work": "An Enquiry Concerning Human Understanding",
+      "source_identifier": "standardebooks/david-hume_an-enquiry-concerning-human-understanding",
+      "source_url": "https://github.com/standardebooks/david-hume_an-enquiry-concerning-human-understanding",
+      "edition_description": "Epub source for the Standard Ebooks edition of An Enquiry Concerning Human Understanding, by David Hume",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Edgar Allan Poe",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/edgar-allan-poe_short-fiction",
+      "source_url": "https://github.com/standardebooks/edgar-allan-poe_short-fiction",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by Edgar Allan Poe",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Edith Wharton",
+      "work": "Ethan Frome",
+      "source_identifier": "standardebooks/edith-wharton_ethan-frome",
+      "source_url": "https://github.com/standardebooks/edith-wharton_ethan-frome",
+      "edition_description": "Epub source for the Standard Ebooks edition of Ethan Frome, by Edith Wharton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Edith Wharton",
+      "work": "Summer",
+      "source_identifier": "standardebooks/edith-wharton_summer",
+      "source_url": "https://github.com/standardebooks/edith-wharton_summer",
+      "edition_description": "Epub source for the Standard Ebooks edition of Summer, by Edith Wharton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Edith Wharton",
+      "work": "The House of Mirth",
+      "source_identifier": "standardebooks/edith-wharton_the-house-of-mirth",
+      "source_url": "https://github.com/standardebooks/edith-wharton_the-house-of-mirth",
+      "edition_description": "Epub source for the Standard Ebooks edition of The House of Mirth, by Edith Wharton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Émile Zola",
+      "work": "His Masterpiece",
+      "source_identifier": "standardebooks/emile-zola_his-masterpiece_ernest-alfred-vizetelly",
+      "source_url": "https://github.com/standardebooks/emile-zola_his-masterpiece_ernest-alfred-vizetelly",
+      "edition_description": "Epub source for the Standard Ebooks edition of His Masterpiece, by Émile Zola. Translated by Ernest Alfred Vizetelly",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Epictetus",
+      "work": "Discourses",
+      "source_identifier": "standardebooks/epictetus_discourses_george-long",
+      "source_url": "https://github.com/standardebooks/epictetus_discourses_george-long",
+      "edition_description": "Epub source for the Standard Ebooks edition of Discourses, by Epictetus. Translated by George Long",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Frances Hodgson Burnett",
+      "work": "A Little Princess",
+      "source_identifier": "standardebooks/frances-hodgson-burnett_a-little-princess",
+      "source_url": "https://github.com/standardebooks/frances-hodgson-burnett_a-little-princess",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Little Princess, by Frances Hodgson Burnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Frances Hodgson Burnett",
+      "work": "The Secret Garden",
+      "source_identifier": "standardebooks/frances-hodgson-burnett_the-secret-garden",
+      "source_url": "https://github.com/standardebooks/frances-hodgson-burnett_the-secret-garden",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Secret Garden, by Frances Hodgson Burnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Friedrich Nietzsche",
+      "work": "Beyond Good and Evil",
+      "source_identifier": "standardebooks/friedrich-nietzsche_beyond-good-and-evil_helen-zimmern",
+      "source_url": "https://github.com/standardebooks/friedrich-nietzsche_beyond-good-and-evil_helen-zimmern",
+      "edition_description": "Epub source for the Standard Ebooks edition of Beyond Good and Evil, by Friedrich Nietzsche. Translated by Helen Zimmern",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Friedrich Nietzsche",
+      "work": "Thus Spake Zarathustra",
+      "source_identifier": "standardebooks/friedrich-nietzsche_thus-spake-zarathustra_thomas-common",
+      "source_url": "https://github.com/standardebooks/friedrich-nietzsche_thus-spake-zarathustra_thomas-common",
+      "edition_description": "Epub source for the Standard Ebooks edition of Thus Spake Zarathustra, by Friedrich Nietzsche. Translated by Thomas Common",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "work": "Demons",
+      "source_identifier": "standardebooks/fyodor-dostoevsky_demons_constance-garnett",
+      "source_url": "https://github.com/standardebooks/fyodor-dostoevsky_demons_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of Demons, by Fyodor Dostoevsky. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "work": "Poor Folk",
+      "source_identifier": "standardebooks/fyodor-dostoevsky_poor-folk_c-j-hogarth",
+      "source_url": "https://github.com/standardebooks/fyodor-dostoevsky_poor-folk_c-j-hogarth",
+      "edition_description": "Epub source for the Standard Ebooks edition of Poor Folk, by Fyodor Dostoevsky. Translated by C. J. Hogarth",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "work": "The Gambler",
+      "source_identifier": "standardebooks/fyodor-dostoevsky_the-gambler_c-j-hogarth",
+      "source_url": "https://github.com/standardebooks/fyodor-dostoevsky_the-gambler_c-j-hogarth",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Gambler, by Fyodor Dostoevsky. Translated by C. J. Hogarth",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "work": "The Idiot",
+      "source_identifier": "standardebooks/fyodor-dostoevsky_the-idiot_eva-m-martin",
+      "source_url": "https://github.com/standardebooks/fyodor-dostoevsky_the-idiot_eva-m-martin",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Idiot, by Fyodor Dostoevsky. Translated by Eva M. Martin",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "Manalive",
+      "source_identifier": "standardebooks/g-k-chesterton_manalive",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_manalive",
+      "edition_description": "Epub source for the Standard Ebooks edition of Manalive, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "The Club of Queer Trades",
+      "source_identifier": "standardebooks/g-k-chesterton_the-club-of-queer-trades",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_the-club-of-queer-trades",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Club of Queer Trades, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "The Incredulity of Father Brown",
+      "source_identifier": "standardebooks/g-k-chesterton_the-incredulity-of-father-brown",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_the-incredulity-of-father-brown",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Incredulity of Father Brown, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "The Man Who Was Thursday",
+      "source_identifier": "standardebooks/g-k-chesterton_the-man-who-was-thursday",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_the-man-who-was-thursday",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Man Who Was Thursday, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "The Secret of Father Brown",
+      "source_identifier": "standardebooks/g-k-chesterton_the-secret-of-father-brown",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_the-secret-of-father-brown",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Secret of Father Brown, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "G. K. Chesterton",
+      "work": "What’s Wrong with the World",
+      "source_identifier": "standardebooks/g-k-chesterton_whats-wrong-with-the-world",
+      "source_url": "https://github.com/standardebooks/g-k-chesterton_whats-wrong-with-the-world",
+      "edition_description": "Epub source for the Standard Ebooks edition of What’s Wrong with the World, by G. K. Chesterton",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Arms and the Man",
+      "source_identifier": "standardebooks/george-bernard-shaw_arms-and-the-man",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_arms-and-the-man",
+      "edition_description": "Epub source for the Standard Ebooks edition of Arms and the Man, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Candida",
+      "source_identifier": "standardebooks/george-bernard-shaw_candida",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_candida",
+      "edition_description": "Epub source for the Standard Ebooks edition of Candida, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Getting Married",
+      "source_identifier": "standardebooks/george-bernard-shaw_getting-married",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_getting-married",
+      "edition_description": "Epub source for the Standard Ebooks edition of Getting Married, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Major Barbara",
+      "source_identifier": "standardebooks/george-bernard-shaw_major-barbara",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_major-barbara",
+      "edition_description": "Epub source for the Standard Ebooks edition of Major Barbara, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Misalliance",
+      "source_identifier": "standardebooks/george-bernard-shaw_misalliance",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_misalliance",
+      "edition_description": "Epub source for the Standard Ebooks edition of Misalliance, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Pygmalion",
+      "source_identifier": "standardebooks/george-bernard-shaw_pygmalion",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_pygmalion",
+      "edition_description": "Epub source for the Standard Ebooks edition of Pygmalion, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "Short Plays",
+      "source_identifier": "standardebooks/george-bernard-shaw_short-plays",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_short-plays",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Plays, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "The Doctor’s Dilemma",
+      "source_identifier": "standardebooks/george-bernard-shaw_the-doctors-dilemma",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_the-doctors-dilemma",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Doctor’s Dilemma, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Bernard Shaw",
+      "work": "You Never Can Tell",
+      "source_identifier": "standardebooks/george-bernard-shaw_you-never-can-tell",
+      "source_url": "https://github.com/standardebooks/george-bernard-shaw_you-never-can-tell",
+      "edition_description": "Epub source for the Standard Ebooks edition of You Never Can Tell, by George Bernard Shaw",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Eliot",
+      "work": "Middlemarch",
+      "source_identifier": "standardebooks/george-eliot_middlemarch",
+      "source_url": "https://github.com/standardebooks/george-eliot_middlemarch",
+      "edition_description": "Epub source for the Standard Ebooks edition of Middlemarch, by George Eliot",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "George Eliot",
+      "work": "Silas Marner",
+      "source_identifier": "standardebooks/george-eliot_silas-marner",
+      "source_url": "https://github.com/standardebooks/george-eliot_silas-marner",
+      "edition_description": "Epub source for the Standard Ebooks edition of Silas Marner, by George Eliot",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Gustave Flaubert",
+      "work": "Madame Bovary",
+      "source_identifier": "standardebooks/gustave-flaubert_madame-bovary_eleanor-marx-aveling",
+      "source_url": "https://github.com/standardebooks/gustave-flaubert_madame-bovary_eleanor-marx-aveling",
+      "edition_description": "Epub source for the Standard Ebooks edition of Madame Bovary, by Gustave Flaubert",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Gustave Flaubert",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/gustave-flaubert_short-fiction_m-walter-dunne",
+      "source_url": "https://github.com/standardebooks/gustave-flaubert_short-fiction_m-walter-dunne",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by Gustave Flaubert. Translated by M. Walter Dunne",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "Kipps",
+      "source_identifier": "standardebooks/h-g-wells_kipps",
+      "source_url": "https://github.com/standardebooks/h-g-wells_kipps",
+      "edition_description": "Epub source for the Standard Ebooks edition of Kipps, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/h-g-wells_short-fiction",
+      "source_url": "https://github.com/standardebooks/h-g-wells_short-fiction",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "The Food of the Gods",
+      "source_identifier": "standardebooks/h-g-wells_the-food-of-the-gods",
+      "source_url": "https://github.com/standardebooks/h-g-wells_the-food-of-the-gods",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Food of the Gods, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "The Invisible Man",
+      "source_identifier": "standardebooks/h-g-wells_the-invisible-man",
+      "source_url": "https://github.com/standardebooks/h-g-wells_the-invisible-man",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Invisible Man, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "The Time Machine",
+      "source_identifier": "standardebooks/h-g-wells_the-time-machine",
+      "source_url": "https://github.com/standardebooks/h-g-wells_the-time-machine",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Time Machine, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "The Wonderful Visit",
+      "source_identifier": "standardebooks/h-g-wells_the-wonderful-visit",
+      "source_url": "https://github.com/standardebooks/h-g-wells_the-wonderful-visit",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Wonderful Visit, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "H. G. Wells",
+      "work": "Tono-Bungay",
+      "source_identifier": "standardebooks/h-g-wells_tono-bungay",
+      "source_url": "https://github.com/standardebooks/h-g-wells_tono-bungay",
+      "edition_description": "Epub source for the Standard Ebooks edition of Tono-Bungay, by H. G. Wells",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henrik Ibsen",
+      "work": "A Doll’s House",
+      "source_identifier": "standardebooks/henrik-ibsen_a-dolls-house_r-farquharson-sharp",
+      "source_url": "https://github.com/standardebooks/henrik-ibsen_a-dolls-house_r-farquharson-sharp",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Doll’s House, by Henrik Ibsen. Translated by R. Farquharson Sharp",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henrik Ibsen",
+      "work": "Hedda Gabler",
+      "source_identifier": "standardebooks/henrik-ibsen_hedda-gabler_edmund-gosse_william-archer",
+      "source_url": "https://github.com/standardebooks/henrik-ibsen_hedda-gabler_edmund-gosse_william-archer",
+      "edition_description": "Epub source for the Standard Ebooks edition of Hedda Gabler, by Henrik Ibsen. Translated by Edmund Gosse and William Archer",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henry David Thoreau",
+      "work": "Essays",
+      "source_identifier": "standardebooks/henry-david-thoreau_essays",
+      "source_url": "https://github.com/standardebooks/henry-david-thoreau_essays",
+      "edition_description": "Epub source for the Standard Ebooks edition of Essays, by Henry David Thoreau",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henry James",
+      "work": "The Ambassadors",
+      "source_identifier": "standardebooks/henry-james_the-ambassadors",
+      "source_url": "https://github.com/standardebooks/henry-james_the-ambassadors",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Ambassadors, by Henry James",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henry James",
+      "work": "The Portrait of a Lady",
+      "source_identifier": "standardebooks/henry-james_the-portrait-of-a-lady",
+      "source_url": "https://github.com/standardebooks/henry-james_the-portrait-of-a-lady",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Portrait of a Lady, by Henry James",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Henry James",
+      "work": "The Wings of the Dove",
+      "source_identifier": "standardebooks/henry-james_the-wings-of-the-dove",
+      "source_url": "https://github.com/standardebooks/henry-james_the-wings-of-the-dove",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Wings of the Dove, by Henry James",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Herman Melville",
+      "work": "Moby Dick",
+      "source_identifier": "standardebooks/herman-melville_moby-dick",
+      "source_url": "https://github.com/standardebooks/herman-melville_moby-dick",
+      "edition_description": "Epub source for the Standard Ebooks edition of Moby Dick, by Herman Melville",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Herman Melville",
+      "work": "Typee",
+      "source_identifier": "standardebooks/herman-melville_typee",
+      "source_url": "https://github.com/standardebooks/herman-melville_typee",
+      "edition_description": "Epub source for the Standard Ebooks edition of Typee, by Herman Melville",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "A Marriage Settlement",
+      "source_identifier": "standardebooks/honore-de-balzac_a-marriage-settlement_clara-bell",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_a-marriage-settlement_clara-bell",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Marriage Settlement, by Honoré de Balzac. Translated by Clara Bell",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "A Woman of Thirty",
+      "source_identifier": "standardebooks/honore-de-balzac_a-woman-of-thirty_ellen-marriage",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_a-woman-of-thirty_ellen-marriage",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Woman of Thirty, by Honoré de Balzac. Translated by Ellen Marriage",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "Béatrix",
+      "source_identifier": "standardebooks/honore-de-balzac_beatrix_james-waring",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_beatrix_james-waring",
+      "edition_description": "Epub source for the Standard Ebooks edition of Béatrix, by Honoré de Balzac. Translated by James Waring",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "Father Goriot",
+      "source_identifier": "standardebooks/honore-de-balzac_father-goriot_ellen-marriage",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_father-goriot_ellen-marriage",
+      "edition_description": "Epub source for the Standard Ebooks edition of Father Goriot, by Honoré de Balzac. Translated by Ellen Marriage",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "Lost Illusions",
+      "source_identifier": "standardebooks/honore-de-balzac_lost-illusions_ellen-marriage",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_lost-illusions_ellen-marriage",
+      "edition_description": "Epub source for the Standard Ebooks edition of Lost Illusions, by Honoré de Balzac. Translated by Ellen Marriage",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "Parisians in the Country",
+      "source_identifier": "standardebooks/honore-de-balzac_parisians-in-the-country_ellen-marriage",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_parisians-in-the-country_ellen-marriage",
+      "edition_description": "Epub source for the Standard Ebooks edition of Parisians in the Country, by Honoré de Balzac. Translated by Ellen Marriage",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "The Celibates",
+      "source_identifier": "standardebooks/honore-de-balzac_the-celibates_clara-bell",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_the-celibates_clara-bell",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Celibates, by Honoré de Balzac. Translated by Clara Bell",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Honoré de Balzac",
+      "work": "The Lily of the Valley",
+      "source_identifier": "standardebooks/honore-de-balzac_the-lily-of-the-valley_james-waring",
+      "source_url": "https://github.com/standardebooks/honore-de-balzac_the-lily-of-the-valley_james-waring",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Lily of the Valley, by Honoré de Balzac. Translated by James Waring",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Ivan Turgenev",
+      "work": "A House of Gentlefolk",
+      "source_identifier": "standardebooks/ivan-turgenev_a-house-of-gentlefolk_constance-garnett",
+      "source_url": "https://github.com/standardebooks/ivan-turgenev_a-house-of-gentlefolk_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of A House of Gentlefolk, by Ivan Turgenev. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Ivan Turgenev",
+      "work": "On the Eve",
+      "source_identifier": "standardebooks/ivan-turgenev_on-the-eve_constance-garnett",
+      "source_url": "https://github.com/standardebooks/ivan-turgenev_on-the-eve_constance-garnett",
+      "edition_description": "Epub source for the Standard Ebooks edition of On the Eve, by Ivan Turgenev. Translated by Constance Garnett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jack London",
+      "work": "Lost Face",
+      "source_identifier": "standardebooks/jack-london_lost-face",
+      "source_url": "https://github.com/standardebooks/jack-london_lost-face",
+      "edition_description": "Epub source for the Standard Ebooks edition of Lost Face, by Jack London",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jack London",
+      "work": "The Call of the Wild",
+      "source_identifier": "standardebooks/jack-london_the-call-of-the-wild",
+      "source_url": "https://github.com/standardebooks/jack-london_the-call-of-the-wild",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Call of the Wild, by Jack London",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jack London",
+      "work": "The Sea-Wolf",
+      "source_identifier": "standardebooks/jack-london_the-sea-wolf",
+      "source_url": "https://github.com/standardebooks/jack-london_the-sea-wolf",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Sea-Wolf, by Jack London",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jack London",
+      "work": "When God Laughs",
+      "source_identifier": "standardebooks/jack-london_when-god-laughs",
+      "source_url": "https://github.com/standardebooks/jack-london_when-god-laughs",
+      "edition_description": "Epub source for the Standard Ebooks edition of When God Laughs, by Jack London",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jane Addams",
+      "work": "Democracy and Social Ethics",
+      "source_identifier": "standardebooks/jane-addams_democracy-and-social-ethics",
+      "source_url": "https://github.com/standardebooks/jane-addams_democracy-and-social-ethics",
+      "edition_description": "Epub source for the Standard Ebooks edition of Democracy and Social Ethics, by Jane Addams",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jane Austen",
+      "work": "Emma",
+      "source_identifier": "standardebooks/jane-austen_emma",
+      "source_url": "https://github.com/standardebooks/jane-austen_emma",
+      "edition_description": "Epub source for the Standard Ebooks edition of Emma, by Jane Austen",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jane Austen",
+      "work": "Northanger Abbey",
+      "source_identifier": "standardebooks/jane-austen_northanger-abbey",
+      "source_url": "https://github.com/standardebooks/jane-austen_northanger-abbey",
+      "edition_description": "Epub source for the Standard Ebooks edition of Northanger Abbey, by Jane Austen",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jane Austen",
+      "work": "Pride and Prejudice",
+      "source_identifier": "standardebooks/jane-austen_pride-and-prejudice",
+      "source_url": "https://github.com/standardebooks/jane-austen_pride-and-prejudice",
+      "edition_description": "Epub source for the Standard Ebooks edition of Pride and Prejudice, by Jane Austen",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jean-Jacques Rousseau",
+      "work": "The Social Contract",
+      "source_identifier": "standardebooks/jean-jacques-rousseau_the-social-contract_g-d-h-cole",
+      "source_url": "https://github.com/standardebooks/jean-jacques-rousseau_the-social-contract_g-d-h-cole",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Social Contract, by Jean-Jacques Rousseau. Translated by G. D. H. Cole",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "John Keats",
+      "work": "Poetry",
+      "source_identifier": "standardebooks/john-keats_poetry",
+      "source_url": "https://github.com/standardebooks/john-keats_poetry",
+      "edition_description": "Epub source for the Standard Ebooks edition of Poetry, by John Keats",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "John Locke",
+      "work": "Two Treatises of Government",
+      "source_identifier": "standardebooks/john-locke_two-treatises-of-government",
+      "source_url": "https://github.com/standardebooks/john-locke_two-treatises-of-government",
+      "edition_description": "Epub source for the Standard Ebooks edition of Two Treatises of Government, by John Locke",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "John Stuart Mill",
+      "work": "On Liberty",
+      "source_identifier": "standardebooks/john-stuart-mill_on-liberty",
+      "source_url": "https://github.com/standardebooks/john-stuart-mill_on-liberty",
+      "edition_description": "Epub source for the Standard Ebooks edition of On Liberty, by John Stuart Mill",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "John Stuart Mill",
+      "work": "The Subjection of Women",
+      "source_identifier": "standardebooks/john-stuart-mill_the-subjection-of-women",
+      "source_url": "https://github.com/standardebooks/john-stuart-mill_the-subjection-of-women",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Subjection of Women, by John Stuart Mill",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "A Personal Record",
+      "source_identifier": "standardebooks/joseph-conrad_a-personal-record",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_a-personal-record",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Personal Record, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "An Outcast of the Islands",
+      "source_identifier": "standardebooks/joseph-conrad_an-outcast-of-the-islands",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_an-outcast-of-the-islands",
+      "edition_description": "Epub source for the Standard Ebooks edition of An Outcast of the Islands, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad and Ford Madox Ford",
+      "work": "Romance",
+      "source_identifier": "standardebooks/joseph-conrad_ford-madox-ford_romance",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_ford-madox-ford_romance",
+      "edition_description": "Epub source for the Standard Ebooks edition of Romance, by Joseph Conrad and Ford Madox Ford",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad and Ford Madox Ford",
+      "work": "The Nature of a Crime",
+      "source_identifier": "standardebooks/joseph-conrad_ford-madox-ford_the-nature-of-a-crime",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_ford-madox-ford_the-nature-of-a-crime",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Nature of a Crime, by Joseph Conrad and Ford Madox Ford",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "Lord Jim",
+      "source_identifier": "standardebooks/joseph-conrad_lord-jim",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_lord-jim",
+      "edition_description": "Epub source for the Standard Ebooks edition of Lord Jim, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "The Arrow of Gold",
+      "source_identifier": "standardebooks/joseph-conrad_the-arrow-of-gold",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_the-arrow-of-gold",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Arrow of Gold, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "The Mirror of the Sea",
+      "source_identifier": "standardebooks/joseph-conrad_the-mirror-of-the-sea",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_the-mirror-of-the-sea",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Mirror of the Sea, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "The Rover",
+      "source_identifier": "standardebooks/joseph-conrad_the-rover",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_the-rover",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Rover, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "The Shadow Line",
+      "source_identifier": "standardebooks/joseph-conrad_the-shadow-line",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_the-shadow-line",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Shadow Line, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Joseph Conrad",
+      "work": "Victory",
+      "source_identifier": "standardebooks/joseph-conrad_victory",
+      "source_url": "https://github.com/standardebooks/joseph-conrad_victory",
+      "edition_description": "Epub source for the Standard Ebooks edition of Victory, by Joseph Conrad",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "Around the World In Eighty Days",
+      "source_identifier": "standardebooks/jules-verne_around-the-world-in-eighty-days_george-makepeace-towle",
+      "source_url": "https://github.com/standardebooks/jules-verne_around-the-world-in-eighty-days_george-makepeace-towle",
+      "edition_description": "Epub source for the Standard Ebooks edition of Around the World In Eighty Days, by Jules Verne. Translated by George Makepeace Towle",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "Facing the Flag",
+      "source_identifier": "standardebooks/jules-verne_facing-the-flag_f-tennyson-neely",
+      "source_url": "https://github.com/standardebooks/jules-verne_facing-the-flag_f-tennyson-neely",
+      "edition_description": "Epub source for the Standard Ebooks edition of Facing the Flag, by Jules Verne. Translated by F. Tennyson Neely",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "From the Earth to the Moon",
+      "source_identifier": "standardebooks/jules-verne_from-the-earth-to-the-moon_ward-lock-co",
+      "source_url": "https://github.com/standardebooks/jules-verne_from-the-earth-to-the-moon_ward-lock-co",
+      "edition_description": "Epub source for the Standard Ebooks edition of From the Earth to the Moon, by Jules Verne. Translated by Ward, Lock & Co.",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "Journey to the Center of the Earth",
+      "source_identifier": "standardebooks/jules-verne_journey-to-the-center-of-the-earth_f-a-malleson",
+      "source_url": "https://github.com/standardebooks/jules-verne_journey-to-the-center-of-the-earth_f-a-malleson",
+      "edition_description": "Epub source for the Standard Ebooks edition of Journey to the Center of the Earth, by Jules Verne",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "Round the Moon",
+      "source_identifier": "standardebooks/jules-verne_round-the-moon_ward-lock-co",
+      "source_url": "https://github.com/standardebooks/jules-verne_round-the-moon_ward-lock-co",
+      "edition_description": "Epub source for the Standard Ebooks edition of Round the Moon, by Jules Verne. Translated by Ward, Lock & Co.",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "The Child of the Cavern",
+      "source_identifier": "standardebooks/jules-verne_the-child-of-the-cavern_vincent-parke-and-company",
+      "source_url": "https://github.com/standardebooks/jules-verne_the-child-of-the-cavern_vincent-parke-and-company",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Child of the Cavern, by Jules Verne. Translated by Vincent Parke and Company",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "The Giant Raft",
+      "source_identifier": "standardebooks/jules-verne_the-giant-raft_w-j-gordon",
+      "source_url": "https://github.com/standardebooks/jules-verne_the-giant-raft_w-j-gordon",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Giant Raft, by Jules Verne. Translated by W. J. Gordon",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "The Special Correspondent",
+      "source_identifier": "standardebooks/jules-verne_the-special-correspondent_the-boys-own-paper",
+      "source_url": "https://github.com/standardebooks/jules-verne_the-special-correspondent_the-boys-own-paper",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Special Correspondent, by Jules Verne. Translated by The Boy’s Own Paper",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Jules Verne",
+      "work": "Ticket No. 9672",
+      "source_identifier": "standardebooks/jules-verne_ticket-no-9672_laura-e-kendall",
+      "source_url": "https://github.com/standardebooks/jules-verne_ticket-no-9672_laura-e-kendall",
+      "edition_description": "Epub source for the Standard Ebooks edition of Ticket No. 9672, by Jules Verne. Translated by Laura E. Kendall",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Kate Chopin",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/kate-chopin_short-fiction",
+      "source_url": "https://github.com/standardebooks/kate-chopin_short-fiction",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by Kate Chopin",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "L. Frank Baum",
+      "work": "Dorothy and the Wizard in Oz",
+      "source_identifier": "standardebooks/l-frank-baum_dorothy-and-the-wizard-in-oz",
+      "source_url": "https://github.com/standardebooks/l-frank-baum_dorothy-and-the-wizard-in-oz",
+      "edition_description": "Epub source for the Standard Ebooks edition of Dorothy and the Wizard in Oz, by L. Frank Baum",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "L. Frank Baum",
+      "work": "The Marvelous Land of Oz",
+      "source_identifier": "standardebooks/l-frank-baum_the-marvelous-land-of-oz",
+      "source_url": "https://github.com/standardebooks/l-frank-baum_the-marvelous-land-of-oz",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Marvelous Land of Oz, by L. Frank Baum",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "L. Frank Baum",
+      "work": "The Wonderful Wizard of Oz",
+      "source_identifier": "standardebooks/l-frank-baum_the-wonderful-wizard-of-oz",
+      "source_url": "https://github.com/standardebooks/l-frank-baum_the-wonderful-wizard-of-oz",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Wonderful Wizard of Oz, by L. Frank Baum",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "work": "A Confession",
+      "source_identifier": "standardebooks/leo-tolstoy_a-confession_aylmer-maude",
+      "source_url": "https://github.com/standardebooks/leo-tolstoy_a-confession_aylmer-maude",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Confession, by Leo Tolstoy. Translated by Aylmer Maude",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "work": "Hadji Murád",
+      "source_identifier": "standardebooks/leo-tolstoy_hadji-murad_aylmer-maude",
+      "source_url": "https://github.com/standardebooks/leo-tolstoy_hadji-murad_aylmer-maude",
+      "edition_description": "Epub source for the Standard Ebooks edition of Hadji Murád, by Leo Tolstoy. Translated by Aylmer Maude",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/leo-tolstoy_short-fiction_various-translators",
+      "source_url": "https://github.com/standardebooks/leo-tolstoy_short-fiction_various-translators",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by Leo Tolstoy. Translated by Louise Maude, Aylmer Maude, Nathan Haskell Dole, Constance Garnett, J. D. Duff, Leo Wiener, R. S. Townsend, Hagberg Wright, Benjamin Tucker, Everyman’s Library, Vladimir Chertkov, and Isabella Fyvie Mayo",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "work": "The Power of Darkness",
+      "source_identifier": "standardebooks/leo-tolstoy_the-power-of-darkness_louise-maude_aylmer-maude",
+      "source_url": "https://github.com/standardebooks/leo-tolstoy_the-power-of-darkness_louise-maude_aylmer-maude",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Power of Darkness, by Leo Tolstoy. Translated by Louise Maude and Aylmer Maude",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "work": "What Is Art?",
+      "source_identifier": "standardebooks/leo-tolstoy_what-is-art_aylmer-maude",
+      "source_url": "https://github.com/standardebooks/leo-tolstoy_what-is-art_aylmer-maude",
+      "edition_description": "Epub source for the Standard Ebooks edition of What Is Art?, by Leo Tolstoy. Translated by Aylmer Maude",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Lewis Carroll. Illustrated by John Tenniel",
+      "work": "Alice's Adventures in Wonderland",
+      "source_identifier": "standardebooks/lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "source_url": "https://github.com/standardebooks/lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "edition_description": "Epub source for the Standard Ebooks edition of Alice's Adventures in Wonderland, by Lewis Carroll. Illustrated by John Tenniel",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Lewis Carroll. Illustrated by John Tenniel",
+      "work": "Through the Looking-Glass",
+      "source_identifier": "standardebooks/lewis-carroll_through-the-looking-glass_john-tenniel",
+      "source_url": "https://github.com/standardebooks/lewis-carroll_through-the-looking-glass_john-tenniel",
+      "edition_description": "Epub source for the Standard Ebooks edition of Through the Looking-Glass, by Lewis Carroll. Illustrated by John Tenniel",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Louisa May Alcott",
+      "work": "Behind a Mask",
+      "source_identifier": "standardebooks/louisa-may-alcott_behind-a-mask",
+      "source_url": "https://github.com/standardebooks/louisa-may-alcott_behind-a-mask",
+      "edition_description": "Epub source for the Standard Ebooks edition of Behind a Mask, by Louisa May Alcott",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Marcus Aurelius",
+      "work": "Meditations",
+      "source_identifier": "standardebooks/marcus-aurelius_meditations_george-long",
+      "source_url": "https://github.com/standardebooks/marcus-aurelius_meditations_george-long",
+      "edition_description": "Epub source for the Standard Ebooks edition of Meditations, by Marcus Aurelius. Translated by George Long",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Mark Twain",
+      "work": "Personal Recollections of Joan of Arc",
+      "source_identifier": "standardebooks/mark-twain_personal-recollections-of-joan-of-arc",
+      "source_url": "https://github.com/standardebooks/mark-twain_personal-recollections-of-joan-of-arc",
+      "edition_description": "Epub source for the Standard Ebooks edition of Personal Recollections of Joan of Arc, by Mark Twain",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Mark Twain",
+      "work": "Roughing It",
+      "source_identifier": "standardebooks/mark-twain_roughing-it",
+      "source_url": "https://github.com/standardebooks/mark-twain_roughing-it",
+      "edition_description": "Epub source for the Standard Ebooks edition of Roughing It, by Mark Twain",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Mark Twain",
+      "work": "The Adventures of Tom Sawyer",
+      "source_identifier": "standardebooks/mark-twain_the-adventures-of-tom-sawyer",
+      "source_url": "https://github.com/standardebooks/mark-twain_the-adventures-of-tom-sawyer",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Adventures of Tom Sawyer, by Mark Twain",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Mark Twain",
+      "work": "The Innocents Abroad",
+      "source_identifier": "standardebooks/mark-twain_the-innocents-abroad",
+      "source_url": "https://github.com/standardebooks/mark-twain_the-innocents-abroad",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Innocents Abroad, by Mark Twain",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Mary Wollstonecraft",
+      "work": "A Vindication of the Rights of Woman",
+      "source_identifier": "standardebooks/mary-wollstonecraft_a-vindication-of-the-rights-of-woman",
+      "source_url": "https://github.com/standardebooks/mary-wollstonecraft_a-vindication-of-the-rights-of-woman",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Vindication of the Rights of Woman, by Mary Wollstonecraft",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Nathaniel Hawthorne",
+      "work": "The Blithedale Romance",
+      "source_identifier": "standardebooks/nathaniel-hawthorne_the-blithedale-romance",
+      "source_url": "https://github.com/standardebooks/nathaniel-hawthorne_the-blithedale-romance",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Blithedale Romance, by Nathaniel Hawthorne",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Nathaniel Hawthorne",
+      "work": "The Scarlet Letter",
+      "source_identifier": "standardebooks/nathaniel-hawthorne_the-scarlet-letter",
+      "source_url": "https://github.com/standardebooks/nathaniel-hawthorne_the-scarlet-letter",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Scarlet Letter, by Nathaniel Hawthorne",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Nikolai Gogol",
+      "work": "Short Fiction",
+      "source_identifier": "standardebooks/nikolai-gogol_short-fiction_various-translators",
+      "source_url": "https://github.com/standardebooks/nikolai-gogol_short-fiction_various-translators",
+      "edition_description": "Epub source for the Standard Ebooks edition of Short Fiction, by Nikolai Gogol. Translated by Claud Field, Isabel F. Hapgood, Vizetelly and Company, and George Tolstoy",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Oscar Wilde",
+      "work": "A Woman of No Importance",
+      "source_identifier": "standardebooks/oscar-wilde_a-woman-of-no-importance",
+      "source_url": "https://github.com/standardebooks/oscar-wilde_a-woman-of-no-importance",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Woman of No Importance, by Oscar Wilde",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Oscar Wilde",
+      "work": "Children’s Stories",
+      "source_identifier": "standardebooks/oscar-wilde_childrens-stories",
+      "source_url": "https://github.com/standardebooks/oscar-wilde_childrens-stories",
+      "edition_description": "Epub source for the Standard Ebooks edition of Children’s Stories, by Oscar Wilde",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Oscar Wilde",
+      "work": "Lord Arthur Savile’s Crime and Other Stories",
+      "source_identifier": "standardebooks/oscar-wilde_lord-arthur-saviles-crime-and-other-stories",
+      "source_url": "https://github.com/standardebooks/oscar-wilde_lord-arthur-saviles-crime-and-other-stories",
+      "edition_description": "Epub source for the Standard Ebooks edition of Lord Arthur Savile’s Crime and Other Stories, by Oscar Wilde",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Oscar Wilde",
+      "work": "The Importance of Being Earnest",
+      "source_identifier": "standardebooks/oscar-wilde_the-importance-of-being-earnest",
+      "source_url": "https://github.com/standardebooks/oscar-wilde_the-importance-of-being-earnest",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Importance of Being Earnest, by Oscar Wilde",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Plato",
+      "work": "Dialogues",
+      "source_identifier": "standardebooks/plato_dialogues_benjamin-jowett",
+      "source_url": "https://github.com/standardebooks/plato_dialogues_benjamin-jowett",
+      "edition_description": "Epub source for the Standard Ebooks edition of Dialogues, by Plato. Translated by Benjamin Jowett",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Rabindranath Tagore",
+      "work": "My Reminiscences",
+      "source_identifier": "standardebooks/rabindranath-tagore_my-reminiscences_the-macmillan-company",
+      "source_url": "https://github.com/standardebooks/rabindranath-tagore_my-reminiscences_the-macmillan-company",
+      "edition_description": "Epub source for the Standard Ebooks edition of My Reminiscences, by Rabindranath Tagore. Translated by The Macmillan Company",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Ralph Waldo Emerson",
+      "work": "Representative Men",
+      "source_identifier": "standardebooks/ralph-waldo-emerson_representative-men",
+      "source_url": "https://github.com/standardebooks/ralph-waldo-emerson_representative-men",
+      "edition_description": "Epub source for the Standard Ebooks edition of Representative Men, by Ralph Waldo Emerson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Frost",
+      "work": "New Hampshire",
+      "source_identifier": "standardebooks/robert-frost_new-hampshire",
+      "source_url": "https://github.com/standardebooks/robert-frost_new-hampshire",
+      "edition_description": "Epub source for the Standard Ebooks edition of New Hampshire, by Robert Frost",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Louis Stevenson",
+      "work": "Catriona",
+      "source_identifier": "standardebooks/robert-louis-stevenson_catriona",
+      "source_url": "https://github.com/standardebooks/robert-louis-stevenson_catriona",
+      "edition_description": "Epub source for the Standard Ebooks edition of Catriona, by Robert Louis Stevenson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Louis Stevenson",
+      "work": "Poetry",
+      "source_identifier": "standardebooks/robert-louis-stevenson_poetry",
+      "source_url": "https://github.com/standardebooks/robert-louis-stevenson_poetry",
+      "edition_description": "Epub source for the Standard Ebooks edition of Poetry, by Robert Louis Stevenson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Louis Stevenson",
+      "work": "The Black Arrow",
+      "source_identifier": "standardebooks/robert-louis-stevenson_the-black-arrow",
+      "source_url": "https://github.com/standardebooks/robert-louis-stevenson_the-black-arrow",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Black Arrow, by Robert Louis Stevenson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Louis Stevenson",
+      "work": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+      "source_identifier": "standardebooks/robert-louis-stevenson_the-strange-case-of-dr-jekyll-and-mr-hyde",
+      "source_url": "https://github.com/standardebooks/robert-louis-stevenson_the-strange-case-of-dr-jekyll-and-mr-hyde",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Strange Case of Dr. Jekyll and Mr. Hyde, by Robert Louis Stevenson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Robert Louis Stevenson",
+      "work": "Treasure Island",
+      "source_identifier": "standardebooks/robert-louis-stevenson_treasure-island",
+      "source_url": "https://github.com/standardebooks/robert-louis-stevenson_treasure-island",
+      "edition_description": "Epub source for the Standard Ebooks edition of Treasure Island, by Robert Louis Stevenson",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Rudyard Kipling. Illustrated by Rudyard Kipling",
+      "work": "Just So Stories",
+      "source_identifier": "standardebooks/rudyard-kipling_just-so-stories",
+      "source_url": "https://github.com/standardebooks/rudyard-kipling_just-so-stories",
+      "edition_description": "Epub source for the Standard Ebooks edition of Just So Stories, by Rudyard Kipling. Illustrated by Rudyard Kipling",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Rudyard Kipling",
+      "work": "The Jungle Book",
+      "source_identifier": "standardebooks/rudyard-kipling_the-jungle-book",
+      "source_url": "https://github.com/standardebooks/rudyard-kipling_the-jungle-book",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Jungle Book, by Rudyard Kipling",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Seneca",
+      "work": "Dialogues",
+      "source_identifier": "standardebooks/seneca_dialogues_aubrey-stewart",
+      "source_url": "https://github.com/standardebooks/seneca_dialogues_aubrey-stewart",
+      "edition_description": "Epub source for the Standard Ebooks edition of Dialogues, by Seneca. Translated by Aubrey Stewart",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Hardy",
+      "work": "A Pair of Blue Eyes",
+      "source_identifier": "standardebooks/thomas-hardy_a-pair-of-blue-eyes",
+      "source_url": "https://github.com/standardebooks/thomas-hardy_a-pair-of-blue-eyes",
+      "edition_description": "Epub source for the Standard Ebooks edition of A Pair of Blue Eyes, by Thomas Hardy",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Hardy",
+      "work": "Jude the Obscure",
+      "source_identifier": "standardebooks/thomas-hardy_jude-the-obscure",
+      "source_url": "https://github.com/standardebooks/thomas-hardy_jude-the-obscure",
+      "edition_description": "Epub source for the Standard Ebooks edition of Jude the Obscure, by Thomas Hardy",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Hardy",
+      "work": "Tess of the d’Urbervilles",
+      "source_identifier": "standardebooks/thomas-hardy_tess-of-the-durbervilles",
+      "source_url": "https://github.com/standardebooks/thomas-hardy_tess-of-the-durbervilles",
+      "edition_description": "Epub source for the Standard Ebooks edition of Tess of the d’Urbervilles, by Thomas Hardy",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Hardy",
+      "work": "The Return of the Native",
+      "source_identifier": "standardebooks/thomas-hardy_the-return-of-the-native",
+      "source_url": "https://github.com/standardebooks/thomas-hardy_the-return-of-the-native",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Return of the Native, by Thomas Hardy",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Paine",
+      "work": "Essays",
+      "source_identifier": "standardebooks/thomas-paine_essays",
+      "source_url": "https://github.com/standardebooks/thomas-paine_essays",
+      "edition_description": "Epub source for the Standard Ebooks edition of Essays, by Thomas Paine",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Thomas Paine",
+      "work": "The American Crisis",
+      "source_identifier": "standardebooks/thomas-paine_the-american-crisis",
+      "source_url": "https://github.com/standardebooks/thomas-paine_the-american-crisis",
+      "edition_description": "Epub source for the Standard Ebooks edition of The American Crisis, by Thomas Paine",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Victor Hugo",
+      "work": "Les Misérables",
+      "source_identifier": "standardebooks/victor-hugo_les-miserables_isabel-f-hapgood",
+      "source_url": "https://github.com/standardebooks/victor-hugo_les-miserables_isabel-f-hapgood",
+      "edition_description": "Epub source for the Standard Ebooks edition of Les Misérables, by Victor Hugo. Translated by Isabel F. Hapgood",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Victor Hugo",
+      "work": "Toilers of the Sea",
+      "source_identifier": "standardebooks/victor-hugo_toilers-of-the-sea_william-moy-thomas",
+      "source_url": "https://github.com/standardebooks/victor-hugo_toilers-of-the-sea_william-moy-thomas",
+      "edition_description": "Epub source for the Standard Ebooks edition of Toilers of the Sea, by Victor Hugo. Translated by William Moy Thomas",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Virginia Woolf",
+      "work": "Mrs. Dalloway",
+      "source_identifier": "standardebooks/virginia-woolf_mrs-dalloway",
+      "source_url": "https://github.com/standardebooks/virginia-woolf_mrs-dalloway",
+      "edition_description": "Epub source for the Standard Ebooks edition of Mrs. Dalloway, by Virginia Woolf",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Virginia Woolf",
+      "work": "Orlando",
+      "source_identifier": "standardebooks/virginia-woolf_orlando",
+      "source_url": "https://github.com/standardebooks/virginia-woolf_orlando",
+      "edition_description": "Epub source for the Standard Ebooks edition of Orlando, by Virginia Woolf",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Virginia Woolf",
+      "work": "To the Lighthouse",
+      "source_identifier": "standardebooks/virginia-woolf_to-the-lighthouse",
+      "source_url": "https://github.com/standardebooks/virginia-woolf_to-the-lighthouse",
+      "edition_description": "Epub source for the Standard Ebooks edition of To the Lighthouse, by Virginia Woolf",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "W. E. B. Du Bois",
+      "work": "Dark Princess",
+      "source_identifier": "standardebooks/w-e-b-du-bois_dark-princess",
+      "source_url": "https://github.com/standardebooks/w-e-b-du-bois_dark-princess",
+      "edition_description": "Epub source for the Standard Ebooks edition of Dark Princess, by W. E. B. Du Bois",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "W. E. B. Du Bois",
+      "work": "The Quest of the Silver Fleece",
+      "source_identifier": "standardebooks/w-e-b-du-bois_the-quest-of-the-silver-fleece",
+      "source_url": "https://github.com/standardebooks/w-e-b-du-bois_the-quest-of-the-silver-fleece",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Quest of the Silver Fleece, by W. E. B. Du Bois",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Walt Whitman",
+      "work": "Leaves of Grass",
+      "source_identifier": "standardebooks/walt-whitman_leaves-of-grass",
+      "source_url": "https://github.com/standardebooks/walt-whitman_leaves-of-grass",
+      "edition_description": "Epub source for the Standard Ebooks edition of Leaves of Grass, by Walt Whitman",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Willa Cather",
+      "work": "My Ántonia",
+      "source_identifier": "standardebooks/willa-cather_my-antonia",
+      "source_url": "https://github.com/standardebooks/willa-cather_my-antonia",
+      "edition_description": "Epub source for the Standard Ebooks edition of My Ántonia, by Willa Cather",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Willa Cather",
+      "work": "One of Ours",
+      "source_identifier": "standardebooks/willa-cather_one-of-ours",
+      "source_url": "https://github.com/standardebooks/willa-cather_one-of-ours",
+      "edition_description": "Epub source for the Standard Ebooks edition of One of Ours, by Willa Cather",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "Willa Cather",
+      "work": "The Song of the Lark",
+      "source_identifier": "standardebooks/willa-cather_the-song-of-the-lark",
+      "source_url": "https://github.com/standardebooks/willa-cather_the-song-of-the-lark",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Song of the Lark, by Willa Cather",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William James",
+      "work": "Pragmatism",
+      "source_identifier": "standardebooks/william-james_pragmatism",
+      "source_url": "https://github.com/standardebooks/william-james_pragmatism",
+      "edition_description": "Epub source for the Standard Ebooks edition of Pragmatism, by William James",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Makepeace Thackeray",
+      "work": "The History of Henry Esmond",
+      "source_identifier": "standardebooks/william-makepeace-thackeray_the-history-of-henry-esmond",
+      "source_url": "https://github.com/standardebooks/william-makepeace-thackeray_the-history-of-henry-esmond",
+      "edition_description": "Epub source for the Standard Ebooks edition of The History of Henry Esmond, by William Makepeace Thackeray",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Makepeace Thackeray",
+      "work": "Vanity Fair",
+      "source_identifier": "standardebooks/william-makepeace-thackeray_vanity-fair",
+      "source_url": "https://github.com/standardebooks/william-makepeace-thackeray_vanity-fair",
+      "edition_description": "Epub source for the Standard Ebooks edition of Vanity Fair, by William Makepeace Thackeray",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "All’s Well That Ends Well",
+      "source_identifier": "standardebooks/william-shakespeare_alls-well-that-ends-well",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_alls-well-that-ends-well",
+      "edition_description": "Epub source for the Standard Ebooks edition of All’s Well That Ends Well, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "As You Like It",
+      "source_identifier": "standardebooks/william-shakespeare_as-you-like-it",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_as-you-like-it",
+      "edition_description": "Epub source for the Standard Ebooks edition of As You Like It, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Cymbeline",
+      "source_identifier": "standardebooks/william-shakespeare_cymbeline",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_cymbeline",
+      "edition_description": "Epub source for the Standard Ebooks edition of Cymbeline, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Hamlet",
+      "source_identifier": "standardebooks/william-shakespeare_hamlet",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_hamlet",
+      "edition_description": "Epub source for the Standard Ebooks edition of Hamlet, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Henry IV, Part II",
+      "source_identifier": "standardebooks/william-shakespeare_henry-iv-part-ii",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_henry-iv-part-ii",
+      "edition_description": "Epub source for the Standard Ebooks edition of Henry IV, Part II, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Henry VI, Part I",
+      "source_identifier": "standardebooks/william-shakespeare_henry-vi-part-i",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_henry-vi-part-i",
+      "edition_description": "Epub source for the Standard Ebooks edition of Henry VI, Part I, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Henry VI, Part III",
+      "source_identifier": "standardebooks/william-shakespeare_henry-vi-part-iii",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_henry-vi-part-iii",
+      "edition_description": "Epub source for the Standard Ebooks edition of Henry VI, Part III, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare and John Fletcher",
+      "work": "The Two Noble Kinsmen",
+      "source_identifier": "standardebooks/william-shakespeare_john-fletcher_the-two-noble-kinsmen",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_john-fletcher_the-two-noble-kinsmen",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Two Noble Kinsmen, by William Shakespeare and John Fletcher",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "King John",
+      "source_identifier": "standardebooks/william-shakespeare_king-john",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_king-john",
+      "edition_description": "Epub source for the Standard Ebooks edition of King John, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Love’s Labour’s Lost",
+      "source_identifier": "standardebooks/william-shakespeare_loves-labours-lost",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_loves-labours-lost",
+      "edition_description": "Epub source for the Standard Ebooks edition of Love’s Labour’s Lost, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Measure for Measure",
+      "source_identifier": "standardebooks/william-shakespeare_measure-for-measure",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_measure-for-measure",
+      "edition_description": "Epub source for the Standard Ebooks edition of Measure for Measure, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Othello",
+      "source_identifier": "standardebooks/william-shakespeare_othello",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_othello",
+      "edition_description": "Epub source for the Standard Ebooks edition of Othello, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Poetry",
+      "source_identifier": "standardebooks/william-shakespeare_poetry",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_poetry",
+      "edition_description": "Epub source for the Standard Ebooks edition of Poetry, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Richard III",
+      "source_identifier": "standardebooks/william-shakespeare_richard-iii",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_richard-iii",
+      "edition_description": "Epub source for the Standard Ebooks edition of Richard III, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "The Comedy of Errors",
+      "source_identifier": "standardebooks/william-shakespeare_the-comedy-of-errors",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_the-comedy-of-errors",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Comedy of Errors, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "The Merry Wives of Windsor",
+      "source_identifier": "standardebooks/william-shakespeare_the-merry-wives-of-windsor",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_the-merry-wives-of-windsor",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Merry Wives of Windsor, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "The Tempest",
+      "source_identifier": "standardebooks/william-shakespeare_the-tempest",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_the-tempest",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Tempest, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "The Winter’s Tale",
+      "source_identifier": "standardebooks/william-shakespeare_the-winters-tale",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_the-winters-tale",
+      "edition_description": "Epub source for the Standard Ebooks edition of The Winter’s Tale, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Titus Andronicus",
+      "source_identifier": "standardebooks/william-shakespeare_titus-andronicus",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_titus-andronicus",
+      "edition_description": "Epub source for the Standard Ebooks edition of Titus Andronicus, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    },
+    {
+      "author": "William Shakespeare",
+      "work": "Twelfth Night",
+      "source_identifier": "standardebooks/william-shakespeare_twelfth-night",
+      "source_url": "https://github.com/standardebooks/william-shakespeare_twelfth-night",
+      "edition_description": "Epub source for the Standard Ebooks edition of Twelfth Night, by William Shakespeare",
+      "text_format": "EPUB3 source; extract only src/epub/text/*.xhtml"
+    }
+  ],
+  "release_boundary": "The imported records retain source identifiers, repository links, XHTML locators, excerpt digests, and extraction-snapshot digests, but the staging sources were not pinned to immutable repository commits. Every v2 record therefore remains source-linked-review-pending and must not be described as source-verified."
+}

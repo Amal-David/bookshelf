@@ -1,8 +1,16 @@
 # Catalog data
 
-Bookshelf 1.0.0 contains 983 unique book records and 2,539 quote records across
-fiction, science, motivation, philosophy, history, psychology, startup, and
-romance.
+Bookshelf's shipped totals are generated, rather than copied into this page.
+See [`docs/catalog-counts.md`](docs/catalog-counts.md) and
+[`bookshelf/data/catalog_manifest.json`](bookshelf/data/catalog_manifest.json)
+for the current catalogued-book, quoted-work, source, rights, verification, and
+rejection counts.
+
+The current generated totals are 3,124 quote records, 3,111 normalized unique
+texts, 1,117 catalogued books, and 949 works referenced by quotes. Of those
+records, 585 v2 records are primary-source-linked but remain pending human
+review; 2,539 legacy records are explicitly `legacy-unverified`. These totals
+must not be used to claim that every quote is verified or editorially curated.
 
 ## Provenance
 
@@ -12,10 +20,26 @@ the current dataset does not retain a per-field source ledger. Summaries are
 editorial descriptions stored with the project; they should not be represented
 as publisher copy or authoritative literary criticism.
 
-Quote records contain the text, attributed author, attributed book, optional
-chapter text, and context tags. Many entries do not yet identify an edition,
-page number, or primary-source scan. Attribution and punctuation can differ
-between editions, and popular quotations are frequently misattributed.
+Legacy quote records contain the text, attributed author, attributed book,
+optional chapter text, and context tags. They are deliberately labeled
+`legacy-unverified`: many do not identify an edition, page number, or
+primary-source scan, and attribution and punctuation can differ between
+editions.
+
+The v2 import contains only records linked to a Standard Ebooks source bundle.
+Each has a stable quote and work ID, normalized-text digest, source identifier
+and repository URL, XHTML locator, extraction-snapshot digest, rights class,
+U.S. jurisdiction note, verification date/state, and explicit
+`review-pending-human-review` admission status. The compiler checks those IDs,
+digests, locator fields, URL shapes, and safety gates. The original staging
+fetches used moving repository branches rather than immutable commit pins, so
+the records are deliberately labeled `source-linked-review-pending`; this is
+not a machine or human verification claim. The source edition is CC0-dedicated
+and the underlying texts are marked public domain in the United States; this is
+not a worldwide clearance claim.
+Opaque quote aggregators and records with missing provenance, unresolved works,
+unsupported rights, control characters, unsafe lengths, exact duplicates, or
+near duplicates are rejected by the offline compiler.
 
 The MIT license covers the software written for this repository. It does not
 grant rights in third-party books or quoted text. Downstream distributors are
@@ -36,8 +60,9 @@ focused regression test when a correction fixes a repeatable catalog problem.
 
 ## Refreshing counts
 
-Counts in public documentation must come from the shipped modules:
+Counts in public documentation must come from the generated manifest:
 
 ```bash
-python3 -c "from bookshelf.data.books import load_all_books; from bookshelf.data.quotes import QUOTES; print(len(load_all_books()), len(QUOTES))"
+python3 scripts/compile_catalog.py --check
+python3 -c "from bookshelf.data.catalog import counts; print(counts())"
 ```

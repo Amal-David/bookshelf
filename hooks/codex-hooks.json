@@ -1,0 +1,16 @@
+{
+  "description": "Optional Bookshelf quote after a completed Codex turn.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "root=\"${PLUGIN_ROOT:-${CODEX_PLUGIN_ROOT:-}}\"; if [ -n \"$root\" ] && [ -f \"$root/hooks/ambient.py\" ]; then output=\"$(env -i PATH=\"${PATH:-}\" HOME=\"${HOME:-}\" USERPROFILE=\"${USERPROFILE:-}\" APPDATA=\"${APPDATA:-}\" TMPDIR=\"${TMPDIR:-}\" TMP=\"${TMP:-}\" TEMP=\"${TEMP:-}\" LANG=\"${LANG:-}\" LC_ALL=\"${LC_ALL:-}\" LC_CTYPE=\"${LC_CTYPE:-}\" XDG_DATA_HOME=\"${XDG_DATA_HOME:-}\" BOOKSHELF_AMBIENT_ENABLED=\"${BOOKSHELF_AMBIENT_ENABLED:-}\" BOOKSHELF_AMBIENT_CADENCE=\"${BOOKSHELF_AMBIENT_CADENCE:-}\" BOOKSHELF_DATA_HOME=\"${BOOKSHELF_DATA_HOME:-}\" PYTHONUTF8=1 python3 \"$root/hooks/ambient.py\" --host codex 2>/dev/null)\" && printf '%s\\n' \"$output\" || printf '{}\\n'; else printf '{}\\n'; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

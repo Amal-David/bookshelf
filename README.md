@@ -1,30 +1,53 @@
 # Bookshelf
 
-Bookshelf is a terminal library of **983 books** and **2,539 quotes**. Browse
-books, keep reading lists, ask your coding agent for a fitting quote, or opt in
-to a quiet literary companion while you work.
+Bookshelf puts a quiet, perspective-widening book quote inside your Codex or
+Claude Code session every few completed turns. Instead of staring at terminal
+churn while an agent works, you get one small literary reset—selected locally,
+without sending your prompts, code, or transcript anywhere.
+
+It also includes a full terminal library, reading lists, search, and on-demand
+relevant quotes. Those are the library behind the ambient moment, not the main
+event. Shipped totals come from the catalog: see [catalog counts](docs/catalog-counts.md).
+
+[Visit the Bookshelf landing page](https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/).
 
 ![Bookshelf browse view](assets/screenshots/bookshelf_browse.png)
 
-## Two ways to use it
+## The ambient experience
 
-**On demand** is the default. Invoke the Bookshelf skill or run:
-
-```bash
-bookshelf quote
-bookshelf quote --tag focus --json
-```
-
-**Ambient mode** is optional:
+Ambient mode is optional and off by default:
 
 ```bash
-bookshelf ambient enable --cadence 5
+bookshelf ambient enable --cadence 5 --intent refactor
 bookshelf ambient status
 bookshelf ambient disable
 ```
 
-Installing an agent integration does not enable ambient mode. Adapters swallow
-their own failures so a quote can never break the agent's actual turn.
+Installing an agent integration does not enable ambient mode. Adapters contain
+their own errors, but Bookshelf does not make an absolute claim about any host
+turn.
+
+For deliberate use, invoke the Bookshelf skill or run `bookshelf quote`,
+`bookshelf quote --intent refactor`, or `bookshelf feedback up|down`.
+
+## Relevance and privacy
+
+`bookshelf quote --intent refactor` is the explicit on-demand path. Ambient
+`Stop` hooks use the equally explicit theme saved by `ambient enable --intent`;
+they do not pretend a completed-turn event contains task context. Both paths
+map an allow-listed intent to local tags. Neither reads commands, paths,
+prompts, transcripts, code, tool arguments, model output, or makes a network
+call. Ambient delivery is optional, off by default, and fails closed when a
+safe bounded quote is unavailable.
+
+Relevant alternatives rotate before repeats inside a 50-quote recent window.
+Ambient lines are capped at 220 UTF-8 bytes and 32 whitespace-delimited words;
+the explicit on-demand command retains its wider compact-display budget.
+
+The versioned 176-case evaluation is an authored regression contract for that
+intent-to-tag mapping and the deterministic ranker. Its precision metrics catch
+ranking drift; they are not a human-rated claim of literary or semantic
+relevance.
 
 ## Install
 
@@ -38,18 +61,16 @@ pipx install git+https://github.com/Amal-David/bookshelf.git
 
 Then run `bookshelf` to open the interactive library.
 
-### Codex desktop and CLI
+### Codex Desktop and CLI
 
 ```bash
 codex plugin marketplace add Amal-David/bookshelf
 codex plugin add bookshelf@bookshelf
 ```
 
-Restart the desktop app, open **Plugins**, choose the **Bookshelf** marketplace,
-and install Bookshelf. The skill is available on demand. If ambient mode is
-enabled, the bundled `Stop` hook surfaces a lifecycle event banner; it does not
-rewrite assistant response text. Codex asks you to review and trust the hook
-before it runs.
+Bookshelf is packaged as a Codex plugin with a skill and a fail-soft `Stop`
+hook. Codex shares plugin configuration across its app and CLI surfaces; the
+hook returns a compact `systemMessage` when the local cadence is due.
 
 ### Claude Code
 
@@ -60,9 +81,8 @@ Run these inside Claude Code:
 /plugin install bookshelf@bookshelf
 ```
 
-The on-demand skill works independently of ambient mode. Ambient quotes use the
-shared `Stop` hook and appear as system event output rather than authored
-assistant text.
+The marketplace validates strictly with Claude Code 2.1.212 and declares the
+same optional `Stop` cadence used by the Codex integration.
 
 ### Pi
 
@@ -70,9 +90,8 @@ assistant text.
 pi install git:github.com/Amal-David/bookshelf
 ```
 
-Pi loads the canonical skill and a small `agent_end` extension. When ambient
-mode is enabled, the extension renders the due quote as a native companion
-notification without sending it back to the model.
+Pi 0.57 installs and lists the canonical skill plus its `agent_end` extension
+from an isolated home. A live native notification is not claimed.
 
 ### Hermes
 
@@ -80,32 +99,36 @@ notification without sending it back to the model.
 hermes plugins install Amal-David/bookshelf --enable
 ```
 
-Hermes registers the canonical skill plus a `transform_llm_output` hook. When
-ambient mode is enabled and its cadence is due, Hermes appends the quote after
-the completed response. The hook uses no additional model call.
+Hermes 0.16 installs and loads Bookshelf from a clean working directory,
+registering the canonical skill plus its `transform_llm_output` hook. A live
+authenticated turn and appended output are not claimed.
 
-These manifests follow the current host contracts, but the initial release
-still needs hands-on installation checks in each host before those surfaces are
-called fully validated.
+Bookshelf validates install, manifest, loader, and adapter behavior at the
+strongest locally available boundary for Codex, Claude Code, Pi, and Hermes.
+
+The Codex and Claude hooks resolve their own installed plugin roots, and the
+skill's `scripts/quote.py` wrapper resolves the bundled Python package relative
+to itself; neither requires a globally installed `bookshelf` command. The old
+manual `bookshelf/skill/hook.py` and `codex_notify.py` paths are compatibility
+adapters only and are deprecated for new installs.
+
+`protocol/ambient-companion-v1.schema.json` and its example are shipped as
+inert protocol data for integrators. Bookshelf does not import them at runtime
+and ambient delivery never makes network requests.
 
 ## Library
 
-| Genre | Books |
-|---|---:|
-| Fiction | 176 |
-| Science | 151 |
-| Motivation | 132 |
-| Philosophy | 132 |
-| History | 116 |
-| Psychology | 97 |
-| Startup | 96 |
-| Romance | 83 |
-| **Total** | **983** |
-
-Each book has an editorial summary, mood tags, and bibliographic metadata.
+The [generated catalog counts](docs/catalog-counts.md) distinguish catalogued
+books from works referenced by quotes. Legacy records are explicitly marked
+`legacy-unverified`; 585 primary-source-linked v2 records remain pending human
+review and retain their repository link, source locator, extraction-snapshot
+digest, excerpt digest, rights, and review-pending metadata. Those source links
+were not pinned to immutable commits, so the v2 records must not be described
+as source-verified.
 Quotes carry context tags used to prefer relevant entries for work such as
-debugging, building, reviewing, or shipping. See [DATA.md](DATA.md) for
-provenance and the correction policy.
+debugging, building, reviewing, or shipping. This is not a claim that all
+quotes are verified or curated.
+See [DATA.md](DATA.md) for provenance and the correction policy.
 
 ## Terminal library
 
@@ -136,7 +159,11 @@ local under the platform application-data directory named `bookshelf`.
 
 ![Ambient quote example](assets/screenshots/bookshelf_ambient_hook.png)
 
-[Watch the 20-second Bookshelf demo](site/public/bookshelf-demo.mp4).
+[Watch the real five-turn CLI Stop-hook demo on the live landing page](https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/#demo).
+
+The recording invokes the same packaged hook path used by Codex and Claude
+Code. It intentionally shows only the CLI behavior: four quiet stops, then one
+compact quote on the fifth.
 
 The landing-page source lives in [`site/`](site/). It is built from the same
 forest, paper, and rose visual system as the demo.

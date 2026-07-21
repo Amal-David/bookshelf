@@ -17,6 +17,7 @@ DEFAULT_CONFIG = {
     "context_matching": True,
     "ambient_enabled": False,
     "ambient_cadence": 5,
+    "ambient_intent": "neutral",
     "preferred_genres": ["motivation", "startup", "romance"],
 }
 

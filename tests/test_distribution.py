@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -20,7 +21,7 @@ class DistributionMetadataTests(unittest.TestCase):
     def test_release_identity_matches_every_manifest(self) -> None:
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn('name = "ambient-bookshelf"', pyproject)
-        self.assertIn('version = "1.0.0"', pyproject)
+        self.assertIn('version = "1.1.0"', pyproject)
         self.assertIn("dependencies = []", pyproject)
 
         for path in (
@@ -28,7 +29,12 @@ class DistributionMetadataTests(unittest.TestCase):
             ".claude-plugin/plugin.json",
             "package.json",
         ):
-            self.assertEqual(self._json(path)["version"], "1.0.0", path)
+            self.assertEqual(self._json(path)["version"], "1.1.0", path)
+
+        marketplace = self._json(".claude-plugin/marketplace.json")
+        self.assertEqual(marketplace["plugins"][0]["version"], "1.1.0")
+        self.assertIn("version: 1.1.0", (ROOT / "plugin.yaml").read_text(encoding="utf-8"))
+        self.assertIn('__version__ = "1.1.0"', (ROOT / "bookshelf" / "__init__.py").read_text(encoding="utf-8"))
 
     def test_codex_marketplace_points_to_root_plugin(self) -> None:
         marketplace = self._json(".agents/plugins/marketplace.json")
@@ -45,13 +51,36 @@ class DistributionMetadataTests(unittest.TestCase):
         self.assertIn('pi.on("agent_end"', extension)
         self.assertIn("ctx.ui.notify", extension)
 
-    def test_plugin_hook_is_shared_and_fail_safe(self) -> None:
-        hook = self._json("hooks/hooks.json")
-        command = hook["hooks"]["Stop"][0]["hooks"][0]["command"]
-        self.assertIn("CLAUDE_PLUGIN_ROOT", command)
+    def test_host_manifests_declare_their_own_portable_hook_roots(self) -> None:
+        claude_hook = self._json("hooks/hooks.json")
+        codex_hook = self._json("hooks/codex-hooks.json")
+        claude_command = claude_hook["hooks"]["Stop"][0]["hooks"][0]["command"]
+        codex_command = codex_hook["hooks"]["Stop"][0]["hooks"][0]["command"]
+        self.assertIn("CLAUDE_PLUGIN_ROOT", claude_command)
+        self.assertIn("PLUGIN_ROOT", codex_command)
+        for command, host in ((claude_command, "claude"), (codex_command, "codex")):
+            self.assertIn("env -i", command)
+            self.assertIn(f"--host {host}", command)
+            self.assertIn("BOOKSHELF_DATA_HOME", command)
+            self.assertNotIn("env |", command)
+        self.assertEqual(self._json(".claude-plugin/plugin.json")["hooks"], "./hooks/hooks.json")
+        self.assertEqual(self._json(".codex-plugin/plugin.json")["hooks"], "./hooks/codex-hooks.json")
+        self.assertEqual(self._json(".codex-plugin/plugin.json")["skills"], "./skills/")
         script = ROOT / "hooks" / "ambient.py"
         self.assertTrue(script.is_file())
         self.assertIn("except Exception", script.read_text(encoding="utf-8"))
+
+    def test_protocol_contract_is_shipped_as_inert_data(self) -> None:
+        schema = self._json("protocol/ambient-companion-v1.schema.json")
+        example = self._json("protocol/ambient-companion-v1.example.json")
+        self.assertEqual(example["protocol_version"], schema["properties"]["protocol_version"]["const"])
+        self.assertIn(example["host"], schema["properties"]["host"]["enum"])
+        self.assertEqual(example["event"], schema["properties"]["event"]["const"])
+        self.assertIn(example["mode"], schema["properties"]["mode"]["enum"])
+        self.assertLessEqual(len(example["intent_tags"]), schema["properties"]["intent_tags"]["maxItems"])
+        pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+        self.assertIn("ambient-companion-v1.schema.json", pyproject)
+        self.assertIn("ambient-companion-v1.example.json", pyproject)
 
     def test_standalone_python_has_no_umbrella_imports(self) -> None:
         offenders = []
@@ -74,14 +103,16 @@ class DistributionMetadataTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as temp:
             temp_root = Path(temp)
+            isolated_plugin = temp_root / "isolated-plugin"
+            shutil.copytree(ROOT / "bookshelf", isolated_plugin / "bookshelf")
+            shutil.copytree(ROOT / "skills", isolated_plugin / "skills")
             home = temp_root / "home"
             working_directory = temp_root / "unrelated-project"
             home.mkdir()
             working_directory.mkdir()
-            env = os.environ.copy()
-            env["HOME"] = str(home)
+            env = {"HOME": str(home), "PATH": "", "XDG_DATA_HOME": str(home / "data")}
             completed = subprocess.run(
-                [sys.executable, str(script), "--json"],
+                [sys.executable, str(isolated_plugin / "skills" / "bookshelf" / "scripts" / "quote.py"), "--json"],
                 cwd=working_directory,
                 env=env,
                 check=True,

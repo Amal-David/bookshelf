@@ -3,6 +3,12 @@
 from __future__ import annotations
 
 from pathlib import Path
+import sys
+
+
+_PLUGIN_ROOT = Path(__file__).resolve().parent
+if str(_PLUGIN_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PLUGIN_ROOT))
 
 
 def _transform_llm_output(response_text: str, **_kwargs) -> str | None:
@@ -21,6 +27,6 @@ def _transform_llm_output(response_text: str, **_kwargs) -> str | None:
 def register(ctx) -> None:
     """Register the native Hermes hook and canonical Open Agent Skill."""
     ctx.register_hook("transform_llm_output", _transform_llm_output)
-    skill = Path(__file__).parent / "skills" / "bookshelf" / "SKILL.md"
+    skill = _PLUGIN_ROOT / "skills" / "bookshelf" / "SKILL.md"
     if skill.is_file():
         ctx.register_skill("bookshelf", skill)

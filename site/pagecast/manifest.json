@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "bundle": "Bookshelf Pagecast static snapshot",
+  "entrypoint": "index.html",
+  "asset_policy": "All local asset references begin with ./assets/. The publish bundle is self-contained.",
+  "expected_assets": [
+    "./assets/favicon.svg",
+    "./assets/bookshelf-icon.svg",
+    "./assets/LICENSE.txt",
+    "./assets/fonts/source-serif-4-latin-400-normal.woff2",
+    "./assets/fonts/source-serif-4-latin-600-normal.woff2",
+    "./assets/fonts/jetbrains-mono-latin-400-normal.woff2",
+    "./assets/fonts/licenses/source-serif-4-OFL.txt",
+    "./assets/fonts/licenses/jetbrains-mono-OFL.txt"
+  ],
+  "final_media_expected": [
+    "./assets/bookshelf-demo.mp4",
+    "./assets/bookshelf-poster.png"
+  ],
+  "derived_catalog_facts": {
+    "quote_records": 3124,
+    "normalized_unique_texts": 3111,
+    "catalogued_books": 1117,
+    "quoted_works": 949,
+    "v2_primary_source_linked_records_pending_human_review": 585,
+    "legacy_records_explicitly_unverified": 2539
+  },
+  "provenance_note": "The v2 primary-source-linked records remain pending human review. The legacy records are explicitly unverified; this bundle does not represent every quote as verified or curated.",
+  "assets": {
+    "./assets/LICENSE.txt": {
+      "bytes": 1067,
+      "sha256": "d5b37342d0d090efbdee9c41e6e5c6762f36053a28272f8f5cbf5e6fbf0ed34b"
+    },
+    "./assets/bookshelf-demo.mp4": {
+      "bytes": 45908,
+      "sha256": "1df28e010eb6e18628465946d3a175cb0e8ac37f4c1dd883be1609513eee8117"
+    },
+    "./assets/bookshelf-icon.svg": {
+      "bytes": 531,
+      "sha256": "1734dc42712bee746eae3b8933137fc8ea867976e1c514401abcc420d31e1deb"
+    },
+    "./assets/bookshelf-poster.png": {
+      "bytes": 29475,
+      "sha256": "c157193f1b014a3ebb262482da1b25be6593c24a25f57e96baddc7a68aaa5120"
+    },
+    "./assets/favicon.svg": {
+      "bytes": 315,
+      "sha256": "38f6305a45f141ce7b602c6602212bb35221326e90700dad35368209c79f041e"
+    },
+    "./assets/fonts/jetbrains-mono-latin-400-normal.woff2": {
+      "bytes": 21168,
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    "./assets/fonts/licenses/jetbrains-mono-OFL.txt": {
+      "bytes": 4524,
+      "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b"
+    },
+    "./assets/fonts/licenses/source-serif-4-OFL.txt": {
+      "bytes": 4314,
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+    },
+    "./assets/fonts/source-serif-4-latin-400-normal.woff2": {
+      "bytes": 20088,
+      "sha256": "02194deb92d3975dd30e11a3824a1f1db32b48c93654e60560cb81ce8e7b5f95"
+    },
+    "./assets/fonts/source-serif-4-latin-600-normal.woff2": {
+      "bytes": 21532,
+      "sha256": "f2b7e1cf1d277b7608231868135648f8ad8e2b58d8e97ca088bee15dc357bee7"
+    }
+  }
+}

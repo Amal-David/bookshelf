@@ -29,6 +29,10 @@ def atomic_write_text(path: Path, text: str, *, encoding: str = "utf-8") -> None
     """Atomically replace *path* with *text* on the same filesystem."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        os.chmod(path.parent, 0o700)
+    except OSError:
+        pass
     descriptor, temporary_name = tempfile.mkstemp(
         dir=path.parent,
         prefix=f".{path.name}.",

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "rejected_records": 0,
+  "reasons": {},
+  "policy": "Reject opaque sources, unsupported rights, unresolved works, malformed control characters, unsafe length, digest mismatches, exact duplicates, and near duplicates."
+}

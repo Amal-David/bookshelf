@@ -30,14 +30,25 @@ test("server-renders the complete Bookshelf landing page", async () => {
   const html = await response.text();
   assert.match(
     html,
-    /<title>Bookshelf — Ambient book quotes for coding agents<\/title>/i,
+    /<title>Bookshelf — Book quotes inside Codex and Claude Code<\/title>/i,
   );
-  assert.match(html, /A great book can meet you in the middle of/);
+  assert.match(html, /Let the terminal/);
+  assert.match(html, /widen your world/);
+  assert.match(html, /Instead of staring at another tool call/);
+  assert.match(html, /Codex Desktop \+ CLI/);
+  assert.match(html, /bookshelf quote --intent refactor/);
+  assert.match(html, /Do nothing which is of no use/);
+  assert.match(html, /Transcript and summary/);
+  assert.match(html, /3,124/);
+  assert.match(html, /3,111/);
+  assert.match(html, /1,117/);
+  assert.match(html, /949/);
+  assert.match(html, /585/);
   assert.match(html, /2,539/);
   assert.match(html, /Codex/);
   assert.match(html, /Claude/);
   assert.match(html, /Hermes/);
-  assert.match(html, />Pi</);
+  assert.match(html, /Pi/);
   assert.match(html, /bookshelf-demo\.mp4/);
   assert.match(html, /github\.com\/Amal-David\/bookshelf/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
