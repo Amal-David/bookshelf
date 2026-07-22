@@ -76,7 +76,7 @@ export default function Home() {
               Your browser does not support the demo video.
             </video>
           </div>
-          <details className="transcript"><summary>Accessible transcript</summary><p>In the fictional <code>moonshot-with-unit-tests</code> project, Claude Code 2.1.217 with Opus 4.8 removes useless scope from a plan to make the Moon profitable, updates the launch plan, and runs 27 tests successfully. At the Stop boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. The user then asks what survived, and Claude answers: oxygen, return fuel, and one honest spreadsheet.</p></details>
+          <details className="transcript"><summary>Accessible transcript</summary><p>In the fictional <code>rewrite-prod-in-rust-by-lunch</code> project, Claude Code 2.1.217 with Opus 4.8 cuts a reckless whole-production rewrite down to one endpoint, preserves rollback, and runs 27 tests successfully. At the Stop boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. The user then asks what survived, and Claude answers: one endpoint, its tests, and the rollback button; the lunch deadline has been downgraded to fictional.</p></details>
         </section>
 
         <section className="library-section" id="catalog">
