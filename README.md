@@ -1,5 +1,9 @@
 # Bookshelf
 
+**Book quotes that appear naturally inside your coding-agent sessions.**
+
+[![Bookshelf appearing inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
+
 Bookshelf puts a quiet, perspective-widening book quote inside your Codex or
 Claude Code session every few completed turns. Instead of staring at terminal
 churn while an agent works, you get one small literary reset—selected locally,
@@ -9,7 +13,7 @@ It also includes a full terminal library, reading lists, search, and on-demand
 relevant quotes. Those are the library behind the ambient moment, not the main
 event. Shipped totals come from the catalog: see [catalog counts](docs/catalog-counts.md).
 
-[Visit the Bookshelf landing page](https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/).
+[Visit the Bookshelf landing page](https://bookshelf-8dz.pages.dev/).
 
 ![Bookshelf browse view](assets/screenshots/bookshelf_browse.png)
 
@@ -157,13 +161,11 @@ local under the platform application-data directory named `bookshelf`.
 
 ## Demo video
 
-![Ambient quote example](assets/screenshots/bookshelf_ambient_hook.png)
+[Watch the full-resolution terminal demo](https://bookshelf-8dz.pages.dev/#demo).
 
-[Watch the real five-turn CLI Stop-hook demo on the live landing page](https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/#demo).
-
-The recording invokes the same packaged hook path used by Codex and Claude
-Code. It intentionally shows only the CLI behavior: four quiet stops, then one
-compact quote on the fifth.
+The recording shows a Claude Code edit-and-test session. Bookshelf adds one
+compact quote after the completed turn. It never exposes adapter commands or
+raw hook payloads.
 
 The landing-page source lives in [`site/`](site/). It is built from the same
 forest, paper, and rose visual system as the demo.

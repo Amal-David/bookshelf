@@ -46,7 +46,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={githubUrl}>Add Bookshelf to your agent ↗</a>
-              <a className="button button-secondary" href="#proof">Watch five turns</a>
+              <a className="button button-secondary" href="#proof">Watch the terminal demo</a>
             </div>
             <div className="hero-proof" aria-label="Catalog summary">
               <span><strong>5</strong> completed turns</span>
@@ -64,19 +64,19 @@ export default function Home() {
 
         <section className="demo-section" id="proof">
           <div className="section-heading">
-            <p className="eyebrow">Real Stop-hook CLI capture</p>
-            <h2>Five completed turns. One thought worth keeping.</h2>
-            <p>The same packaged Stop hook runs in Codex and Claude Code, stays silent for four turns, then surfaces one compact quote.</p>
+            <p className="eyebrow">Claude Code terminal</p>
+            <h2>The work finishes. Bookshelf leaves one thought behind.</h2>
+            <p>No hook commands or payloads—just the experience inside a coding session.</p>
           </div>
           <pre className="proof-terminal"><code>$ bookshelf quote --intent refactor{"\n\n"}“Do nothing which is of no use.” — Miyamoto Musashi, The Book of Five Rings{"\n\n"}$ bookshelf feedback up|down</code></pre>
           <div className="video-frame">
-            <div className="video-bar"><span>Bookshelf · Codex + Claude Code Stop hook</span><span>real isolated CLI capture</span></div>
-            <video controls playsInline preload="metadata" poster="/bookshelf-poster.png">
+            <div className="video-bar"><span>Bookshelf · Claude Code</span><span>quote at the turn boundary</span></div>
+            <video controls autoPlay muted loop playsInline preload="metadata" poster="/bookshelf-poster.png">
               <source src="/bookshelf-demo.mp4" type="video/mp4" />
               Your browser does not support the demo video.
             </video>
           </div>
-          <details className="transcript"><summary>Transcript and summary</summary><p>This real isolated terminal capture invokes the packaged <code>Stop</code> hook five times. The first four calls stay silent. After the fifth, Bookshelf emits “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. Codex Desktop and Claude Code load this same hook; the video intentionally shows only its CLI behavior.</p></details>
+          <details className="transcript"><summary>Accessible transcript</summary><p>Claude Code simplifies the Bookshelf quote selector, updates the relevant file, and runs 19 focused tests successfully. At the turn boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>.</p></details>
         </section>
 
         <section className="library-section" id="catalog">

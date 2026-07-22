@@ -38,7 +38,9 @@ test("server-renders the complete Bookshelf landing page", async () => {
   assert.match(html, /Codex Desktop \+ CLI/);
   assert.match(html, /bookshelf quote --intent refactor/);
   assert.match(html, /Do nothing which is of no use/);
-  assert.match(html, /Transcript and summary/);
+  assert.match(html, /Accessible transcript/);
+  assert.match(html, /autoplay=""/i);
+  assert.doesNotMatch(html, /Real Stop-hook CLI capture|real isolated CLI capture/);
   assert.match(html, /3,124/);
   assert.match(html, /3,111/);
   assert.match(html, /1,117/);

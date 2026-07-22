@@ -8,7 +8,7 @@ contract, and the evidence boundary for Codex, Claude, Pi, and Hermes adapters.
 favicon, icon, final MP4, and poster are local.
 
 Published Pagecast URL:
-<https://pagecast-6cv.pages.dev/p/endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/>
+<https://bookshelf-8dz.pages.dev/>
 
 ## Local development
 
