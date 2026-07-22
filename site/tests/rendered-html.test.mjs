@@ -42,10 +42,12 @@ test("server-renders the complete Bookshelf landing page", async () => {
   assert.match(html, /Claude Code 2\.1\.217/);
   assert.match(html, /Opus 4\.8/);
   assert.match(html, /rewrite-prod-in-rust-by-lunch/);
-  assert.match(html, /one endpoint, its tests, and the rollback button/i);
-  assert.match(html, /deadline has been downgraded to fictional/i);
+  assert.match(html, /rollback_window_minutes/);
+  assert.match(html, /both tests passing/i);
+  assert.match(html, /The darker the night, the brighter the stars/i);
+  assert.match(html, /1\.25×/);
   assert.match(html, /autoplay=""/i);
-  assert.doesNotMatch(html, /Real Stop-hook CLI capture|real isolated CLI capture/);
+  assert.doesNotMatch(html, /deadline has been downgraded to fictional/i);
   assert.match(html, /3,124/);
   assert.match(html, /3,111/);
   assert.match(html, /1,117/);
