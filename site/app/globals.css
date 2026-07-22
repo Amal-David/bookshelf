@@ -392,6 +392,8 @@ video {
   background: #0c160f;
   display: block;
   height: auto;
+  max-height: 78vh;
+  object-fit: contain;
   width: 100%;
 }
 

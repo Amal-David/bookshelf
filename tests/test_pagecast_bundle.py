@@ -35,7 +35,7 @@ class PagecastBundleTests(unittest.TestCase):
         self.assertEqual(len(re.findall(r"<h1(?:\s|>)", HTML)), 1)
         for marker in (
             'href="#main"',
-            "Transcript and summary",
+            "Accessible transcript",
             "bookshelf quote --intent refactor",
             "bookshelf feedback up|down",
             'tabindex="-1"',
@@ -58,10 +58,7 @@ class PagecastBundleTests(unittest.TestCase):
             self.assertIn(marker, HTML)
 
     def test_pagecast_has_final_canonical_and_social_metadata(self) -> None:
-        page_url = (
-            "https://pagecast-6cv.pages.dev/p/"
-            "endlessly-brooding-cavern-29bf971e4f06b37e880793b556d0a682/"
-        )
+        page_url = "https://bookshelf-8dz.pages.dev/"
         self.assertIn(f'<link rel="canonical" href="{page_url}">', HTML)
         self.assertIn(f'<meta property="og:url" content="{page_url}">', HTML)
         self.assertIn('<meta property="og:type" content="website">', HTML)
