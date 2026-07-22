@@ -32,16 +32,16 @@
       "sha256": "d5b37342d0d090efbdee9c41e6e5c6762f36053a28272f8f5cbf5e6fbf0ed34b"
     },
     "./assets/bookshelf-demo.mp4": {
-      "bytes": 299214,
-      "sha256": "95763eb15497d12f5ab1e5fed7a630b2413c47fb8488bae6f6b60a7e9f97b6e7"
+      "bytes": 498644,
+      "sha256": "a4d6712b98051cc24db274723005ff3ea631a92d6342507bf5854b0de452b8e5"
     },
     "./assets/bookshelf-icon.svg": {
       "bytes": 531,
       "sha256": "1734dc42712bee746eae3b8933137fc8ea867976e1c514401abcc420d31e1deb"
     },
     "./assets/bookshelf-poster.png": {
-      "bytes": 328142,
-      "sha256": "77e7f369573276054316cb9e9f70570b973feecd03d0a5c431d0fe27b2eed8bc"
+      "bytes": 53643,
+      "sha256": "c45d3d39a527dacef48b714a7f0702802c1ddaae21e52998d7b8bcafd65b1c71"
     },
     "./assets/favicon.svg": {
       "bytes": 315,

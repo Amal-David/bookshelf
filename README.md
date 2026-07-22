@@ -2,7 +2,10 @@
 
 **Book quotes that appear naturally inside your coding-agent sessions.**
 
-[![Bookshelf appearing inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
+[![Actual Bookshelf Stop hook inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
+
+*Actual Claude Code 2.1.217 + Opus 4.8 session in a disposable Rust project.
+Idle waits are accelerated; the signed-in account is redacted.*
 
 Bookshelf puts a quiet, perspective-widening book quote inside your Codex or
 Claude Code session every few completed turns. Instead of staring at terminal
@@ -163,10 +166,13 @@ local under the platform application-data directory named `bookshelf`.
 
 [Watch the full-resolution terminal demo](https://bookshelf-8dz.pages.dev/#demo).
 
-The recording shows Claude Code 2.1.217 with Opus 4.8 cutting a fictional
-rewrite-production-in-Rust migration down to one endpoint, Bookshelf adding a
-quote at the Stop boundary, and the user continuing with the next prompt. It
-never exposes adapter commands or raw hook payloads.
+The recording is an authenticated Claude Code 2.1.217 session with Opus 4.8 in
+the disposable `rewrite-prod-in-rust-by-lunch` crate. Claude reads the real
+README and Rust source, changes the risky rollback window from zero to 30
+minutes, runs the real Cargo test suite with both tests passing, writes its own
+dry deploy joke, and then triggers the actual Bookshelf `Stop` hook. Only idle
+waits are accelerated; the account identifier is redacted and the agent's
+actions and output are otherwise untouched.
 
 The landing-page source lives in [`site/`](site/). It is built from the same
 forest, paper, and rose visual system as the demo.

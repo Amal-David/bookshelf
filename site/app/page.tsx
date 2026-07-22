@@ -64,19 +64,19 @@ export default function Home() {
 
         <section className="demo-section" id="proof">
           <div className="section-heading">
-            <p className="eyebrow">Claude Code 2.1.217 · Opus 4.8</p>
-            <h2>The work continues. Bookshelf leaves one thought between turns.</h2>
-            <p>No hook commands or payloads—just the quote appearing naturally, followed by the next prompt.</p>
+            <p className="eyebrow">Actual Claude Code 2.1.217 session · Opus 4.8</p>
+            <h2>A real edit, real tests, and a real Bookshelf Stop hook.</h2>
+            <p>Captured from a disposable Rust project. Only idle waits are accelerated; the signed-in account is redacted.</p>
           </div>
           <pre className="proof-terminal"><code>$ bookshelf quote --intent refactor{"\n\n"}“Do nothing which is of no use.” — Miyamoto Musashi, The Book of Five Rings{"\n\n"}$ bookshelf feedback up|down</code></pre>
           <div className="video-frame">
-            <div className="video-bar"><span>Bookshelf · Claude Code</span><span>quote at the Stop boundary</span></div>
+            <div className="video-bar"><span>Bookshelf · Claude Code</span><span>actual quote at the Stop boundary</span></div>
             <video controls autoPlay muted loop playsInline preload="metadata" poster="/bookshelf-poster.png">
               <source src="/bookshelf-demo.mp4" type="video/mp4" />
               Your browser does not support the demo video.
             </video>
           </div>
-          <details className="transcript"><summary>Accessible transcript</summary><p>In the fictional <code>rewrite-prod-in-rust-by-lunch</code> project, Claude Code 2.1.217 with Opus 4.8 cuts a reckless whole-production rewrite down to one endpoint, preserves rollback, and runs 27 tests successfully. At the Stop boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. The user then asks what survived, and Claude answers: one endpoint, its tests, and the rollback button; the lunch deadline has been downgraded to fictional.</p></details>
+          <details className="transcript"><summary>Accessible transcript</summary><p>In the disposable <code>rewrite-prod-in-rust-by-lunch</code> Rust project, an authenticated Claude Code 2.1.217 session with Opus 4.8 reads the real README and source, changes <code>rollback_window_minutes</code> from zero to 30 minutes for risky deploys, and runs the real Cargo test suite with both tests passing. Claude adds its own dry rollback joke. The actual Bookshelf Stop hook then displays “The darker the night, the brighter the stars.” — Fyodor Dostoevsky, <em>Crime and Punishment</em>. The capture is played at 1.25× with long waits capped; agent actions and output are otherwise untouched.</p></details>
         </section>
 
         <section className="library-section" id="catalog">
