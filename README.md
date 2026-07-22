@@ -163,9 +163,10 @@ local under the platform application-data directory named `bookshelf`.
 
 [Watch the full-resolution terminal demo](https://bookshelf-8dz.pages.dev/#demo).
 
-The recording shows a Claude Code edit-and-test session. Bookshelf adds one
-compact quote after the completed turn. It never exposes adapter commands or
-raw hook payloads.
+The recording shows Claude Code 2.1.217 with Opus 4.8 trimming a fictional Moon
+startup, Bookshelf adding one compact quote at the Stop boundary, and the user
+continuing with the next prompt. It never exposes adapter commands or raw hook
+payloads.
 
 The landing-page source lives in [`site/`](site/). It is built from the same
 forest, paper, and rose visual system as the demo.
