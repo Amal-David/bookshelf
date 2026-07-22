@@ -64,19 +64,19 @@ export default function Home() {
 
         <section className="demo-section" id="proof">
           <div className="section-heading">
-            <p className="eyebrow">Claude Code terminal</p>
-            <h2>The work finishes. Bookshelf leaves one thought behind.</h2>
-            <p>No hook commands or payloads—just the experience inside a coding session.</p>
+            <p className="eyebrow">Claude Code 2.1.217 · Opus 4.8</p>
+            <h2>The work continues. Bookshelf leaves one thought between turns.</h2>
+            <p>No hook commands or payloads—just the quote appearing naturally, followed by the next prompt.</p>
           </div>
           <pre className="proof-terminal"><code>$ bookshelf quote --intent refactor{"\n\n"}“Do nothing which is of no use.” — Miyamoto Musashi, The Book of Five Rings{"\n\n"}$ bookshelf feedback up|down</code></pre>
           <div className="video-frame">
-            <div className="video-bar"><span>Bookshelf · Claude Code</span><span>quote at the turn boundary</span></div>
+            <div className="video-bar"><span>Bookshelf · Claude Code</span><span>quote at the Stop boundary</span></div>
             <video controls autoPlay muted loop playsInline preload="metadata" poster="/bookshelf-poster.png">
               <source src="/bookshelf-demo.mp4" type="video/mp4" />
               Your browser does not support the demo video.
             </video>
           </div>
-          <details className="transcript"><summary>Accessible transcript</summary><p>Claude Code simplifies the Bookshelf quote selector, updates the relevant file, and runs 19 focused tests successfully. At the turn boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>.</p></details>
+          <details className="transcript"><summary>Accessible transcript</summary><p>In the fictional <code>moonshot-with-unit-tests</code> project, Claude Code 2.1.217 with Opus 4.8 removes useless scope from a plan to make the Moon profitable, updates the launch plan, and runs 27 tests successfully. At the Stop boundary, Bookshelf displays “Do nothing which is of no use.” — Miyamoto Musashi, <em>The Book of Five Rings</em>. The user then asks what survived, and Claude answers: oxygen, return fuel, and one honest spreadsheet.</p></details>
         </section>
 
         <section className="library-section" id="catalog">
