@@ -27,6 +27,13 @@ bookshelf ambient status
 bookshelf ambient disable
 ```
 
+Hosts and scripts can also override ambient behavior per process through the
+environment, no config edit needed: `BOOKSHELF_AMBIENT_ENABLED` (`1`/`0`/
+`true`/`false`), `BOOKSHELF_AMBIENT_CADENCE` (positive integer), and
+`BOOKSHELF_DATA_HOME` (redirects config and ambient state to another
+directory). Environment values win over saved config; blank or invalid values
+are ignored.
+
 Installing an agent integration does not enable ambient mode. Adapters contain
 their own errors, but Bookshelf does not make an absolute claim about any host
 turn.

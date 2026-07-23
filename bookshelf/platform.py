@@ -11,9 +11,20 @@ from typing import Any
 
 
 def app_data_dir(app_dir_name: str, base_dir: Path | None = None) -> Path:
-    """Return the app data directory while preserving test overrides."""
+    """Return the app data directory while preserving test overrides.
+
+    ``BOOKSHELF_DATA_HOME`` names the bookshelf data directory itself and
+    redirects the whole local state surface (config, legacy hook state, and
+    the ambient SQLite store). An explicit ``base_dir`` argument still wins;
+    a blank value means unset because the sandboxed hook wrappers always
+    export the variable, possibly empty.
+    """
     if base_dir is not None:
         return Path(base_dir)
+
+    override = os.environ.get("BOOKSHELF_DATA_HOME", "").strip()
+    if override:
+        return Path(override).expanduser()
 
     home = Path.home()
     if sys.platform == "darwin":
