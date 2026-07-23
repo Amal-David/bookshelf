@@ -21,7 +21,7 @@ class DistributionMetadataTests(unittest.TestCase):
     def test_release_identity_matches_every_manifest(self) -> None:
         pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn('name = "ambient-bookshelf"', pyproject)
-        self.assertIn('version = "1.1.0"', pyproject)
+        self.assertIn('version = "1.2.0"', pyproject)
         self.assertIn("dependencies = []", pyproject)
 
         for path in (
@@ -29,12 +29,12 @@ class DistributionMetadataTests(unittest.TestCase):
             ".claude-plugin/plugin.json",
             "package.json",
         ):
-            self.assertEqual(self._json(path)["version"], "1.1.0", path)
+            self.assertEqual(self._json(path)["version"], "1.2.0", path)
 
         marketplace = self._json(".claude-plugin/marketplace.json")
-        self.assertEqual(marketplace["plugins"][0]["version"], "1.1.0")
-        self.assertIn("version: 1.1.0", (ROOT / "plugin.yaml").read_text(encoding="utf-8"))
-        self.assertIn('__version__ = "1.1.0"', (ROOT / "bookshelf" / "__init__.py").read_text(encoding="utf-8"))
+        self.assertEqual(marketplace["plugins"][0]["version"], "1.2.0")
+        self.assertIn("version: 1.2.0", (ROOT / "plugin.yaml").read_text(encoding="utf-8"))
+        self.assertIn('__version__ = "1.2.0"', (ROOT / "bookshelf" / "__init__.py").read_text(encoding="utf-8"))
 
     def test_codex_marketplace_points_to_root_plugin(self) -> None:
         marketplace = self._json(".agents/plugins/marketplace.json")

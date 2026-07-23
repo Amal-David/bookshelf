@@ -17,6 +17,10 @@ node_modules/
 # macOS
 .DS_Store
 
+# VHS recording output (regenerate with scripts/vhs/bookshelf-launch.tape)
+scripts/vhs/output/
+scripts/vhs/frames/
+
 # Editor / agent / IDE config (per-machine)
 .amazonq/
 .claude/
