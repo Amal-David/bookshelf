@@ -1,18 +1,22 @@
-# Lightweight synthetic recording tool — NOT the production marketing demo.
-# The README's hero clip (assets/demo/bookshelf-claude-demo.gif) is a real,
-# captured Claude Code session with its own pagecast landing page; this tape
-# is a fast, reproducible fallback for a quick terminal-only cut (e.g. for a
-# changelog post or an issue repro), scripted with VHS: https://github.com/charmbracelet/vhs
+# VHS launch video — reproducible synthetic terminal recording.
 #
-# Run from the repo root: vhs scripts/vhs/bookshelf-launch.tape
+# This is separate from the README's hero clip
+# (assets/demo/bookshelf-claude-demo.gif), which is a real, captured Claude
+# Code session with its own pagecast landing page. Both ship in the repo;
+# see assets/demo/vhs/README.md for how to choose between them.
+#
+# Run from the repo root: vhs assets/demo/vhs/bookshelf-launch.tape
+# Re-running regenerates bookshelf-launch.mp4/.gif in place (the tracked
+# artifacts), scripted with VHS: https://github.com/charmbracelet/vhs
+#
 # Beat 1: agent session with the ambient hook firing (real hook output)
 # Beat 2: the bookshelf TUI (1,117 catalogued books, 8 genres)
 # Beat 3: CTA
 
 Require python3
 
-Output scripts/vhs/output/bookshelf-launch.mp4
-Output scripts/vhs/output/bookshelf-launch.gif
+Output assets/demo/vhs/bookshelf-launch.mp4
+Output assets/demo/vhs/bookshelf-launch.gif
 
 Set Theme "GruvboxDarkHard"
 Set FontSize 20
@@ -30,16 +34,16 @@ Set WindowBarSize 36
 
 # --- setup (hidden): scratch HOME so no real state is touched ---
 Hide
-Type "source scripts/vhs/lib/record_env.sh && clear"
+Type "source assets/demo/vhs/lib/record_env.sh && clear"
 Enter
-Type "python3 scripts/vhs/lib/claude_session.py"
+Type "python3 assets/demo/vhs/lib/claude_session.py"
 Enter
 Sleep 500ms
 Show
 
 # --- beat 1: session + hero quote ---
 Wait+Screen@30s /PostToolUse/
-Screenshot scripts/vhs/frames/bookshelf-hero.png
+Screenshot assets/demo/vhs/frames/bookshelf-hero.png
 Sleep 4.5s
 Wait@15s
 Sleep 1s
@@ -52,7 +56,7 @@ Show
 Type "python3 -m bookshelf"
 Enter
 Sleep 2.5s
-Screenshot scripts/vhs/frames/bookshelf-shelf.png
+Screenshot assets/demo/vhs/frames/bookshelf-shelf.png
 Down@250ms 4
 Sleep 800ms
 Tab
@@ -61,7 +65,7 @@ Tab
 Sleep 1s
 Enter
 Sleep 2s
-Screenshot scripts/vhs/frames/bookshelf-detail.png
+Screenshot assets/demo/vhs/frames/bookshelf-detail.png
 Right@500ms 2
 Sleep 1.5s
 Escape
@@ -79,4 +83,4 @@ Sleep 300ms
 Show
 Type@60ms "# 1,117 books · 3,124 quotes · one hook — github.com/Amal-David/bookshelf"
 Sleep 4s
-Screenshot scripts/vhs/frames/bookshelf-cta.png
+Screenshot assets/demo/vhs/frames/bookshelf-cta.png

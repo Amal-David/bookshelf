@@ -21,7 +21,7 @@ import textwrap
 import time
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 AMBIENT_HOOK = REPO_ROOT / "hooks" / "ambient.py"
 
 DIM = "\033[2m"
