@@ -1,6 +1,6 @@
 # Bookshelf
 
-**Book quotes that appear naturally inside your coding-agent sessions.**
+**Book quotes that appear inside your coding-agent sessions.**
 
 [![Actual Bookshelf Stop hook inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
 
