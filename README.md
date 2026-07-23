@@ -4,10 +4,6 @@
 
 [![Actual Bookshelf Stop hook inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
 
-*Actual Claude Code 2.1.217 + Opus 4.8 session in a disposable Rust project.
-The 10.6-second hero cut accelerates the work, then highlights and holds the
-real Stop-hook quote for four seconds. The signed-in account is redacted.*
-
 Bookshelf puts a quiet, perspective-widening book quote inside your Codex or
 Claude Code session every few completed turns. Instead of staring at terminal
 churn while an agent works, you get one small literary reset—selected locally,
