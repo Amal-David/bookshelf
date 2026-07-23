@@ -35,11 +35,11 @@ render fine regardless. If you hit this, either use an ffmpeg build predating
 
 ## How it works
 
-- `lib/record_env.sh` points `$HOME` at a scratch temp directory so the
-  ambient-state SQLite database and config are throwaway; your real bookshelf
-  state is never read or written. It also opts the scratch config into
-  ambient delivery (`ambient_enabled: true`) so the staged session's fifth
-  tool call — the default cadence — surfaces a quote.
+- `lib/record_env.sh` sets `BOOKSHELF_DATA_HOME` to a scratch temp directory
+  so the ambient-state SQLite database and config are throwaway; your real
+  bookshelf state is never read or written. It opts into ambient delivery via
+  `BOOKSHELF_AMBIENT_ENABLED=1` — no config file needed — so the staged
+  session's fifth tool call (the default cadence) surfaces a quote.
 - `lib/claude_session.py` prints a staged Claude Code-style transcript at
   reading pace while piping real event JSON into the actual shared hook
   (`hooks/ambient.py`, invoked with `--host claude`). The quote on screen is

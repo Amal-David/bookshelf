@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from bookshelf.platform import app_data_dir
@@ -11,6 +12,31 @@ APP_DIR_NAME = "bookshelf"
 
 # Default (overridden by user config)
 DEFAULT_AMBIENT_CADENCE = 5
+
+# The hook wrappers pass these through their sandboxed env (see hooks/*.json);
+# a blank value means unset because the wrappers always export them.
+_ENV_TRUE = {"1", "true", "yes", "on"}
+_ENV_FALSE = {"0", "false", "no", "off"}
+
+
+def _env_ambient_enabled() -> bool | None:
+    """Parse BOOKSHELF_AMBIENT_ENABLED; unset, blank, or invalid → None."""
+    raw = os.environ.get("BOOKSHELF_AMBIENT_ENABLED", "").strip().casefold()
+    if raw in _ENV_TRUE:
+        return True
+    if raw in _ENV_FALSE:
+        return False
+    return None
+
+
+def _env_ambient_cadence() -> int | None:
+    """Parse BOOKSHELF_AMBIENT_CADENCE; anything but a positive int → None."""
+    raw = os.environ.get("BOOKSHELF_AMBIENT_CADENCE", "").strip()
+    try:
+        value = int(raw)
+    except ValueError:
+        return None
+    return value if value >= 1 else None
 
 
 def _state_dir() -> Path:
@@ -25,8 +51,15 @@ HOOK_STATE_FILE = _state_dir() / "hook_state.json"
 
 
 def is_ambient_enabled() -> bool:
-    """Return whether installed host adapters should emit ambient quotes."""
+    """Return whether installed host adapters should emit ambient quotes.
+
+    Precedence: BOOKSHELF_AMBIENT_ENABLED env override → config → off.
+    """
     try:
+        override = _env_ambient_enabled()
+        if override is not None:
+            return override
+
         from bookshelf.storage import load_config
 
         return bool(load_config().get("ambient_enabled", False))
@@ -35,8 +68,15 @@ def is_ambient_enabled() -> bool:
 
 
 def get_ambient_cadence(host: str) -> int:
-    """Return a safe positive cadence for a native host adapter."""
+    """Return a safe positive cadence for a native host adapter.
+
+    Precedence: BOOKSHELF_AMBIENT_CADENCE env override → config → default.
+    """
     try:
+        override = _env_ambient_cadence()
+        if override is not None:
+            return override
+
         from bookshelf.storage import load_config
 
         config = load_config()
