@@ -5,7 +5,8 @@
 [![Actual Bookshelf Stop hook inside a Claude Code terminal session](assets/demo/bookshelf-claude-demo.gif)](https://bookshelf-8dz.pages.dev/#demo)
 
 *Actual Claude Code 2.1.217 + Opus 4.8 session in a disposable Rust project.
-Idle waits are accelerated; the signed-in account is redacted.*
+The 10.6-second hero cut accelerates the work, then highlights and holds the
+real Stop-hook quote for four seconds. The signed-in account is redacted.*
 
 Bookshelf puts a quiet, perspective-widening book quote inside your Codex or
 Claude Code session every few completed turns. Instead of staring at terminal
@@ -170,9 +171,11 @@ The recording is an authenticated Claude Code 2.1.217 session with Opus 4.8 in
 the disposable `rewrite-prod-in-rust-by-lunch` crate. Claude reads the real
 README and Rust source, changes the risky rollback window from zero to 30
 minutes, runs the real Cargo test suite with both tests passing, writes its own
-dry deploy joke, and then triggers the actual Bookshelf `Stop` hook. Only idle
-waits are accelerated; the account identifier is redacted and the agent's
-actions and output are otherwise untouched.
+dry deploy joke, and then triggers the actual Bookshelf `Stop` hook. The setup
+and tool work are compressed before a modest zoom and four-second highlighted
+hold on the quote. The account identifier is redacted; the agent's actions,
+output, and single Stop event are otherwise untouched. Because the public
+plugin is Stop-only, it truthfully shows one quote per completed response.
 
 The landing-page source lives in [`site/`](site/). It is built from the same
 forest, paper, and rose visual system as the demo.

@@ -46,6 +46,8 @@ test("server-renders the complete Bookshelf landing page", async () => {
   assert.match(html, /both tests passing/i);
   assert.match(html, /The darker the night, the brighter the stars/i);
   assert.match(html, /1\.25×/);
+  assert.match(html, /four-second highlighted hold/i);
+  assert.match(html, /one quote per completed response/i);
   assert.match(html, /autoplay=""/i);
   assert.doesNotMatch(html, /deadline has been downgraded to fictional/i);
   assert.match(html, /3,124/);

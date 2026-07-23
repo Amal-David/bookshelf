@@ -66,7 +66,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">Actual Claude Code 2.1.217 session · Opus 4.8</p>
             <h2>A real edit, real tests, and a real Bookshelf Stop hook.</h2>
-            <p>Captured from a disposable Rust project. Only idle waits are accelerated; the signed-in account is redacted.</p>
+            <p>A 10.6-second cut accelerates the setup, then zooms and holds the quote for four seconds.</p>
           </div>
           <pre className="proof-terminal"><code>$ bookshelf quote --intent refactor{"\n\n"}“Do nothing which is of no use.” — Miyamoto Musashi, The Book of Five Rings{"\n\n"}$ bookshelf feedback up|down</code></pre>
           <div className="video-frame">
@@ -76,7 +76,7 @@ export default function Home() {
               Your browser does not support the demo video.
             </video>
           </div>
-          <details className="transcript"><summary>Accessible transcript</summary><p>In the disposable <code>rewrite-prod-in-rust-by-lunch</code> Rust project, an authenticated Claude Code 2.1.217 session with Opus 4.8 reads the real README and source, changes <code>rollback_window_minutes</code> from zero to 30 minutes for risky deploys, and runs the real Cargo test suite with both tests passing. Claude adds its own dry rollback joke. The actual Bookshelf Stop hook then displays “The darker the night, the brighter the stars.” — Fyodor Dostoevsky, <em>Crime and Punishment</em>. The capture is played at 1.25× with long waits capped; agent actions and output are otherwise untouched.</p></details>
+          <details className="transcript"><summary>Accessible transcript</summary><p>In the disposable <code>rewrite-prod-in-rust-by-lunch</code> Rust project, an authenticated Claude Code 2.1.217 session with Opus 4.8 reads the real README and source, changes <code>rollback_window_minutes</code> from zero to 30 minutes for risky deploys, and runs the real Cargo test suite with both tests passing. Claude adds its own dry rollback joke. The actual Bookshelf Stop hook then displays “The darker the night, the brighter the stars.” — Fyodor Dostoevsky, <em>Crime and Punishment</em>. The source capture is played at 1.25× with long waits capped; the hero edit further compresses the work and gives the quote a four-second highlighted hold. Because the public plugin is Stop-only, the demo truthfully shows one quote per completed response; no extra quotes are synthesized.</p></details>
         </section>
 
         <section className="library-section" id="catalog">
