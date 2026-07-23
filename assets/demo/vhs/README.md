@@ -24,6 +24,15 @@ Re-running the tape regenerates `bookshelf-launch.mp4`/`.gif` in place — they
 are both the source recipe and the tracked output. Per-beat screenshots land
 in `assets/demo/vhs/frames/` (gitignored; not part of the deliverable).
 
+**Known limitation:** VHS 0.11.0's `Screenshot` command fails against very
+new ffmpeg builds (reproduced with ffmpeg 8.1.1) with `does not contain an
+image sequence pattern... use the -update option` — a version mismatch
+between VHS's internal single-frame ffmpeg invocation and ffmpeg 8.x's
+stricter image2 muxer, unrelated to this tape. The `mp4`/`gif` outputs
+render fine regardless. If you hit this, either use an ffmpeg build predating
+8.x, or pull a verification frame straight from the rendered video:
+`ffmpeg -ss <seconds> -i bookshelf-launch.mp4 -frames:v 1 -update 1 frame.png`.
+
 ## How it works
 
 - `lib/record_env.sh` points `$HOME` at a scratch temp directory so the
