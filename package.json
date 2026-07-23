@@ -1,6 +1,6 @@
 {
   "name": "ambient-bookshelf",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A native Bookshelf skill and ambient quote companion for Pi.",
   "license": "MIT",
   "author": "Amal David",

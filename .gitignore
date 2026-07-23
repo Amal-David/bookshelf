@@ -17,6 +17,10 @@ node_modules/
 # macOS
 .DS_Store
 
+# VHS per-beat screenshot captures (regenerate with assets/demo/vhs/bookshelf-launch.tape);
+# the mp4/gif themselves are tracked artifacts, not build output.
+assets/demo/vhs/frames/
+
 # Editor / agent / IDE config (per-machine)
 .amazonq/
 .claude/
